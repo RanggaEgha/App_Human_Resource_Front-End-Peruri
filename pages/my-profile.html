@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>My Profile</title>
+    <!-- plugins:css -->
+    <!-- Material Design Icons CSS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="../vendors/feather/feather.css">
+    <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../vendors/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css">
+
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../css/vertical-layout-light/style.css">
+    <link rel="stylesheet" href="../css/vertical-layout-light/kekuatan-style.css">
+
+
+    <!-- endinject -->
+
+    <link rel="shortcut icon" href="../images/favicon.png" />
+</head>
+
+<body>
+    <div class="container-scroller">
+        <!-- Navbar -->
+        <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+            <!-- Navbar content -->
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+                <div class="me-3">
+                    <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+                        <span class="icon-menu"></span>
+                    </button>
+                </div>
+                <div>
+                    <a class="navbar-brand brand-logo" href="../fasilitas-karyawan.html">
+                        <img src="../images/logo-dark.svg" alt="logo" />
+                    </a>
+                    <a class="navbar-brand brand-logo-mini" href="../fasilitas-karyawan.html">
+                        <img src="../images/PERURI MASTER LOGOGRAM (WARNA).svg" alt="logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-top">
+                <ul class="navbar-nav">
+                    <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+                        <div class="d-flex align-items-center">
+                            <!-- Display SVG Icon -->
+                            <img src="../images/file-icons/icon/icon-dashboard.png" alt="Icon" class="me-2" style="width: 23px;">
+                            <h1 class="h4 mb-0" id="navbarTitle" style="background: linear-gradient(180deg, #20288E 0%, #0083FF 100%);
+                                                        -webkit-background-clip: text;
+                                                        background-clip: text;
+                                                        color: transparent;">
+                                My Profile
+                            </h1>
+                        </div>
+                        <!-- Add top margin for spacing -->
+                        <h3 class="h6 text-muted mt-3">Hai, <span class="fw-bold text-dark">Admin</span></h3>
+                    </li>
+                </ul>
+
+                <!-- Navbar right content -->
+                <ul class="navbar-nav ms-auto">
+                    <!-- Notifications -->
+
+                    <!-- Messages -->
+                    <li class="nav-item dropdown">
+
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="countDropdown">
+
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <img src="../images/faces/face10.jpg" alt="image" class="img-sm profile-pic">
+                                </div>
+
+                            </a>
+                            <!-- Add more message items as needed -->
+                        </div>
+                    </li>
+                    <!-- User Profile -->
+                    <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+                        <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false" style="display: inline-block; padding: 2px; border-radius: 50%; background: linear-gradient(45deg, #C893FD, #8E5FD9);">
+                            <img src="../images/faces/face11.jpg" alt="Profile image" style="width: 55px; height: 55px; display: block; border-radius: 50%; border: 2px solid white;">
+                        </a>
+
+
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                            <div class="dropdown-header text-center">
+                                <div style="display: inline-block; padding: 2px; border-radius: 50%; background: linear-gradient(45deg, #C893FD, #8E5FD9);">
+                                    <img class="img-md rounded-circle" src="../images/faces/face11.jpg" alt="Profile image" style="border-radius: 50%; border: 2px solid white;">
+                                </div>
+                                <p class="mb-1 mt-3 font-weight-semibold">Admin</p>
+                                <p class="fw-light text-muted mb-0">ranggaegha25022003@gmail.com</p>
+                            </div>
+
+                            <a href="/pages/my-profile.html" target="_blank" class="dropdown-item">
+                                <i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile
+                            </a>
+
+                            <a href="/login.html" class="dropdown-item">
+                                <i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i> Sign Out
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+
+        <div class="container-fluid page-body-wrapper">
+            <!-- Main panel -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <!-- Kekuatan Pegawai Content Starts -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="home-tab">
+                                <!-- Tab Content -->
+                                <style>
+                                     :root {
+                                        --primary-color: #20288E;
+                                        --secondary-color: #C893FD;
+                                        --accent-color: #8E5FD9;
+                                        --background-color: #f8f9fa;
+                                        --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                                    }
+                                    /* Definisi Animasi Rotasi 3D */
+                                    
+                                    @keyframes spin3d {
+                                        from {
+                                            transform: rotateY(0deg);
+                                        }
+                                        to {
+                                            transform: rotateY(360deg);
+                                        }
+                                    }
+                                    /* Kelas untuk Menerapkan Animasi Rotasi 3D */
+                                    
+                                    .spin3d-animation {
+                                        animation: spin3d 1.1s linear;
+                                        /* Durasi 5 detik, terus-menerus */
+                                    }
+                                    /* Tambahkan perspektif pada kontainer */
+                                    
+                                    .spin3d-container {
+                                        perspective: 1000px;
+                                    }
+                                    
+                                    .app-profile__wrapper {
+                                        background-color: var(--background-color);
+                                        font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+                                        padding-top: 2rem;
+                                    }
+                                    
+                                    .app-profile__card {
+                                        border: none;
+                                        border-radius: 15px;
+                                        box-shadow: var(--card-shadow);
+                                        transition: transform 0.3s ease;
+                                    }
+                                    
+                                    .app-profile__card:hover {
+                                        transform: translateY(-5px);
+                                    }
+                                    
+                                    .app-profile__image {
+                                        width: 150px;
+                                        height: 150px;
+                                        border-radius: 50%;
+                                        border: 5px solid var(--secondary-color);
+                                        padding: 3px;
+                                        background-color: white;
+                                        transform-style: preserve-3d;
+                                        /* Memungkinkan transformasi 3D */
+                                        backface-visibility: hidden;
+                                        /* Menyembunyikan sisi balik */
+                                    }
+                                    
+                                    .app-profile__input {
+                                        border-radius: 8px;
+                                        border: 1px solid #dee2e6;
+                                        padding: 0.75rem;
+                                        transition: all 0.3s ease;
+                                    }
+                                    
+                                    .app-profile__input:focus {
+                                        box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.25);
+                                    }
+                                    
+                                    .app-profile__btn {
+                                        border-radius: 8px;
+                                        padding: 0.5rem 1.5rem;
+                                        font-weight: 500;
+                                        transition: all 0.3s ease;
+                                        display: inline-flex;
+                                        /* Memastikan ikon dan teks terpusat */
+                                        align-items: center;
+                                        /* Vertikal center */
+                                        justify-content: center;
+                                        /* Horizontal center */
+                                    }
+                                    
+                                    .app-profile__btn--primary {
+                                        background-color: var(--primary-color);
+                                        border: none;
+                                        color: white !important;
+                                    }
+                                    
+                                    .app-profile__btn--primary:hover {
+                                        background-color: var(--accent-color);
+                                        transform: translateY(-2px);
+                                    }
+                                    
+                                    .app-profile__modal {
+                                        border-radius: 15px;
+                                        border: none;
+                                    }
+                                    
+                                    @media (max-width: 767.98px) {
+                                        .profile-card {
+                                            margin-bottom: 2rem;
+                                        }
+                                    }
+                                    
+                                    @media (min-width: 768px) and (max-width: 991.98px) {
+                                        .profile-grid {
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                            gap: 1rem;
+                                        }
+                                    }
+                                    /* Penyesuaian tambahan untuk tombol */
+                                    
+                                    .app-profile__action-buttons .app-profile__btn--primary {
+                                        padding: 0.5rem 1.5rem;
+                                        /* Menambahkan padding vertikal */
+                                    }
+                                </style>
+                                </head>
+
+                                <body>
+                                    <div class="home-tab">
+                                        <!-- Tab Content -->
+                                        <div class="container">
+                                            <div class="row profile-grid">
+                                                <!-- Profile Card -->
+                                                <div class="col-lg-4 profile-card" style="height: fit-content;">
+                                                    <div class="app-profile__card">
+                                                        <div class="card-body text-center p-4">
+                                                            <!-- Tambahkan kelas 'spin3d-container' pada div ini -->
+                                                            <div class="position-relative d-inline-block mb-4 spin3d-container">
+                                                                <!-- Tambahkan kelas 'spin3d-animation' di sini -->
+                                                                <img src="/images/faces/face11.jpg" class="app-profile__image spin3d-animation" alt="Profile Picture">
+                                                                <button class="app-profile__btn app-profile__btn--upload position-absolute bottom-0 end-0 rounded-circle p-2" style="background: rgba(255,255,255,0.9); box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                                                    <i class="fas fa-camera fa-sm text-primary"></i>
+                                                                </button>
+                                                            </div>
+                                                            <h4 class="app-profile__name mb-1">Rangga Egha</h4>
+                                                            <p class="app-profile__role text-muted mb-3">Admin</p>
+                                                            <!-- Memusatkan tombol Edit Profile -->
+                                                            <div class="d-flex justify-content-center gap-2">
+                                                                <button class="app-profile__btn app-profile__btn--primary" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+                                                                    <i class="fas fa-edit me-2"></i>Edit Profile
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Edit Profile Modal -->
+                                                <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header border-0">
+                                                                <h5 class="modal-title" id="editProfileModalLabel">Edit Profile</h5>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Full Name</label>
+                                                                    <input type="text" class="form-control" value="Rangga Egha Permana">
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Nickname</label>
+                                                                    <input type="text" class="form-control" value="Egha">
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Phone</label>
+                                                                    <input type="tel" class="form-control" value="081389709239">
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Location</label>
+                                                                    <input type="text" class="form-control" value="Karawang, Indonesia">
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label class="form-label">Bio</label>
+                                                                    <textarea class="form-control" rows="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem architecto sunt odio quia unde libero quisquam quasi dicta dolor! Amet repellendus soluta assumenda earum in culpa tempore! Corporis, reprehenderit quae.</textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer border-0">
+                                                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                                                                <button type="button" class="app-profile__btn app-profile__btn--primary">Save Changes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Profile Details -->
+                                                <div class="col-lg-8">
+                                                    <div class="card">
+                                                        <div class="card-body p-4">
+                                                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                                                <h4 class="card-title mb-0">Profile Details</h4>
+                                                                <button class="app-profile__btn app-profile__btn--primary" id="saveProfile">
+                                                                    <i class="fas fa-save me-2"></i>Save Profile
+                                                                </button>
+                                                            </div>
+                                                            <div class="row g-3">
+                                                                <div class="col-md-6">
+                                                                    <label class="form-label">Full Name</label>
+                                                                    <input type="text" class="form-control" value="Rangga Egha" readonly>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label class="form-label">Nickname</label>
+                                                                    <input type="text" class="form-control" value="Egha" readonly>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label class="form-label">Email</label>
+                                                                    <input type="email" class="form-control" value="ranggaegha25022003@gmail.com" readonly>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <label class="form-label">Phone</label>
+                                                                    <input type="tel" class="form-control" value="081389709239" readonly>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <label class="form-label">Location</label>
+                                                                    <input type="text" class="form-control" value="Karawang, Indonesia" readonly>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <label class="form-label">Bio</label>
+                                                                    <textarea class="form-control" rows="3" readonly>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur aspernatur tempore cum hic dolor obcaecati similique ipsum culpa? Eum, tenetur modi. Dignissimos deleniti culpa veniam id labore, iusto cum officia.</textarea>
+                                                                </div>
+                                                                <!-- Memusatkan tombol Change Password dan Kembali ke Dashboard -->
+                                                                <div class="col-12 app-profile__action-buttons d-flex justify-content-between">
+                                                                    <button class="btn btn-warning d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#changePasswordModal">
+                                                                        <i class="fas fa-key me-2"></i>Change Password
+                                                                    </button>
+                                                                    <a href="/fasilitas-karyawan.html" class="app-profile__btn app-profile__btn--primary text-decoration-none d-flex align-items-center">
+                                                                        <i class="fas fa-arrow-left me-2"></i>Kembali ke Dashboard
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Change Password Modal -->
+                                            <div class="modal fade" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header border-0">
+                                                            <h5 class="modal-title" id="changePasswordModalLabel">Change Password</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Current Password</label>
+                                                                <div class="input-group">
+                                                                    <input type="password" class="form-control">
+                                                                    <button class="btn btn-outline-secondary toggle-password" type="button">
+                                                                        <i class="fas fa-eye"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label">New Password</label>
+                                                                <div class="input-group">
+                                                                    <input type="password" class="form-control">
+                                                                    <button class="btn btn-outline-secondary toggle-password" type="button">
+                                                                        <i class="fas fa-eye"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label class="form-label">Confirm New Password</label>
+                                                                <div class="input-group">
+                                                                    <input type="password" class="form-control">
+                                                                    <button class="btn btn-outline-secondary toggle-password" type="button">
+                                                                        <i class="fas fa-eye"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer border-0">
+                                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                                                            <button type="button" class="btn btn-primary">Save Changes</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Anda bisa menambahkan tabel, grafik, atau konten lain yang diperlukan -->
+                                    </div>
+
+                                    <!-- Include your main content here -->
+                                    <!-- ... (the rest of your content remains the same) ... -->
+                            </div>
+
+                            <!-- Include your main content here -->
+                            <!-- ... (the rest of your content remains the same) ... -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Include your main content here -->
+            <!-- ... (the rest of your content remains the same) ... -->
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Kekuatan Pegawai Content Ends -->
+    </div>
+    <!-- content-wrapper ends -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="d-sm-flex justify-content-center justify-content-sm-between">
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a
+                                href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from
+                            BootstrapDash.</span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright ©
+                            2021. All rights reserved.</span>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    </div>
+    <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+
+    <!-- plugins:js -->
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Other JS plugins -->
+    <script src="../vendors/js/vendor.bundle.base.js"></script>
+    <!-- End inject -->
+
+    <!-- Plugin js for this page -->
+    <script src="../vendors/chart.js/Chart.min.js"></script>
+    <script src="../vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="../vendors/progressbar.js/progressbar.min.js"></script>
+
+    <!-- inject:js -->
+    <script src="../js/off-canvas.js"></script>
+    <script src="../js/hoverable-collapse.js"></script>
+    <script src="../js/template.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/todolist.js"></script>
+    <!-- End inject -->
+
+    <!-- Custom js for this page-->
+    <script src="../js/kp.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/Chart.roundedBarCharts.js"></script>
+    <!-- End custom js for this page-->
+
+    <!-- JavaScript for Mobile Dropdown Navigation -->
+    <script>
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function(event) {
+                event.stopPropagation(); // Mencegah intervensi dari listener lain
+                window.location.href = this.getAttribute('href');
+            });
+        });
+        document.getElementById('mobileTabSelect').addEventListener('change', function() {
+            var selectedOption = this.options[this.selectedIndex];
+            var href = selectedOption.getAttribute('href');
+            if (href) {
+                window.location.href = href;
+            }
+        });
+        // Toggle password visibility
+        document.querySelectorAll('.input-group .btn-outline-secondary').forEach(button => {
+            button.addEventListener('click', function() {
+                const input = this.parentElement.querySelector('input');
+                const icon = this.querySelector('i');
+
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    input.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            });
+        });
+
+        // Profile save functionality
+        document.getElementById('saveProfile').addEventListener('click', function() {
+            const inputs = document.querySelectorAll('.form-control[readonly]');
+            inputs.forEach(input => {
+                input.removeAttribute('readonly');
+            });
+
+            this.innerHTML = '<i class="fas fa-check me-2"></i>Save Changes';
+            this.classList.remove('btn-primary');
+            this.classList.add('btn-success');
+
+            this.onclick = function() {
+                inputs.forEach(input => {
+                    input.setAttribute('readonly', true);
+                });
+
+                this.innerHTML = '<i class="fas fa-save me-2"></i>Save Profile';
+                this.classList.remove('btn-success');
+                this.classList.add('btn-primary');
+
+                const toast = document.createElement('div');
+                toast.className = 'position-fixed bottom-0 end-0 p-3';
+                toast.style.zIndex = '11';
+                toast.innerHTML = `
+                    <div class="toast show" role="alert">
+                        <div class="toast-header">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <strong class="me-auto">Success</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                        </div>
+                        <div class="toast-body">
+                            Profile updated successfully!
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(toast);
+                setTimeout(() => toast.remove(), 3000);
+
+                this.onclick = null;
+            }
+        });
+        document.getElementById('mobileTabSelect').addEventListener('change', function() {
+            var selectedOption = this.options[this.selectedIndex];
+            var href = selectedOption.getAttribute('data-href');
+            if (href) {
+                window.location.href = href;
+            }
+        });
+    </script>
+    </body>
+
+</html>

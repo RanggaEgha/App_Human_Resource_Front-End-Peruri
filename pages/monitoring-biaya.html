@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Dashboard Monitoring Biaya</title>
+    <!-- plugins:css -->
+    <!-- Material Design Icons CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="../vendors/feather/feather.css">
+    <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../vendors/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css">
+
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="../vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../css/vertical-layout-light/style.css">
+    <link rel="stylesheet" href="../css/vertical-layout-light/monitoring-style.css">
+    <!-- endinject -->
+
+    <link rel="shortcut icon" href="../images/Logo.svg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css/animate.min.css">
+</head>
+
+<body>
+    <div class="container-scroller">
+        <!-- Navbar -->
+        <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+            <!-- Navbar content -->
+            <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+                <div class="me-3">
+                    <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+                        <span class="icon-menu"></span>
+                    </button>
+                </div>
+                <div>
+                    <a class="navbar-brand brand-logo" href="../pages/monitoring-biaya.html">
+                        <img src="../images/logo-dark.svg" alt="logo" />
+                    </a>
+                    <a class="navbar-brand brand-logo-mini" href="../pages/monitoring-biaya.html">
+                        <img src="../images/PERURI MASTER LOGOGRAM (WARNA).svg" alt="logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-menu-wrapper d-flex align-items-top">
+                <ul class="navbar-nav">
+                    <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+                        <div class="d-flex align-items-center">
+                            <img src="../images/file-icons/icon/icon-dashboard.png" alt="Icon" class="me-2" style="width: 23px;">
+                            <h1 class="h4 mb-0" id="navbarTitle" style="background: linear-gradient(180deg, #20288E 0%, #0083FF 100%);
+                                                    -webkit-background-clip: text;
+                                                    background-clip: text;
+                                                    color: transparent;">
+                                Dashboard Monitoring Biaya
+                            </h1>
+                        </div>
+                        <h3 class="h6 text-muted mt-3">Hai, <span class="fw-bold text-dark">Admin</span></h3>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="countDropdown">
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item preview-item">
+                                <div class="preview-thumbnail">
+                                    <img src="../images/faces/face10.jpg" alt="image" class="img-sm profile-pic">
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+                        <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false" style="display: inline-block; padding: 2px; border-radius: 50%; background: linear-gradient(45deg, #C893FD, #8E5FD9);">
+                            <img src="../images/faces/face11.jpg" alt="Profile image" style="width: 55px; height: 55px; display: block; border-radius: 50%; border: 2px solid white;">
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                            <div class="dropdown-header text-center">
+                                <div style="display: inline-block; padding: 2px; border-radius: 50%; background: linear-gradient(45deg, #C893FD, #8E5FD9);">
+                                    <img class="img-md rounded-circle" src="../images/faces/face11.jpg" alt="Profile image" style="border-radius: 50%; border: 2px solid white;">
+                                </div>
+                                <p class="mb-1 mt-3 font-weight-semibold">Admin</p>
+                                <p class="fw-light text-muted mb-0">ranggaegha25022003@gmail.com</p>
+                            </div>
+                            <a href="/pages/my-profile.html" target="_blank" class="dropdown-item">
+                                <i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile
+                            </a>
+                            <a href="/login.html" class="dropdown-item">
+                                <i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i> Sign Out
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+                <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
+                    <span class="mdi mdi-menu"></span>
+                </button>
+            </div>
+        </nav>
+        <!-- End Navbar -->
+
+        <div class="container-fluid page-body-wrapper">
+            <!-- Main panel -->
+            <div class="main-panel">
+                <div class="content-wrapper">
+                    <!-- Monitoring Biaya Content Starts -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="home-tab">
+                                <div class="container d-flex justify-content-center flex-column">
+                                    <div class="tab-container d-none d-md-flex">
+                                        <a href="/fasilitas-karyawan.html" class="tab-item" style="text-decoration: none; color: inherit;">
+                                            <i class="bi bi-bar-chart"></i> Fasilitas Karyawan
+                                        </a>
+                                        <a href="monitoring-biaya.html" class="tab-item active" style="text-decoration: none; color: inherit;">
+                                            <i class="bi bi-bar-chart"></i> Monitoring Biaya
+                                        </a>
+                                        <a href="kekuatan-pegawai.html" class="tab-item" style="text-decoration: none; color: inherit;">
+                                            <i class="bi bi-bar-chart"></i> Kekuatan Pegawai
+                                        </a>
+                                    </div>
+                                    <div class="tab-dropdown d-md-none mt-3">
+                                        <select class="form-select" id="mobileTabSelect" style="text-decoration: none; color: inherit;">
+                                            <option value="fasilitas" href="/fasilitas-karyawan.html">Fasilitas Karyawan</option>
+                                            <option value="monitoring" href="monitoring-biaya.html" selected>Monitoring Biaya</option>
+                                            <option value="kekuatan" href="kekuatan-pegawai.html">Kekuatan Pegawai</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="tab-content tab-content-basic">
+                                    <div class="tab-pane active" id="monitoring">
+                                        <div class="d-sm-flex align-items-center justify-content-between border-bottom">
+                                            <div>
+                                                <div class="btn-wrapper d-flex flex-column flex-md-row gap-2 mt-4 ms-4">
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-outline-secondary rounded-pill dropdown-toggle" type="button" id="divisiFilterMonitoringBiaya" data-bs-toggle="dropdown" aria-expanded="false" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                                            Pilih Divisi
+                                                        </button>
+                                                        <ul class="dropdown-menu scrollable-dropdown" aria-labelledby="divisiFilterMonitoringBiaya">
+                                                            <li><a class="dropdown-item" href="#" data-value="Divisi A">Divisi A</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Divisi B">Divisi B</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Divisi C">Divisi C</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Divisi D">Divisi D</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Divisi E">Divisi E</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Divisi F">Divisi F</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Divisi G">Divisi G</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Divisi H">Divisi H</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Divisi I">Divisi I</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Divisi J">Divisi J</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Divisi K">Divisi K</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Divisi L">Divisi L</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Divisi M">Divisi M</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Divisi N">Divisi N</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Divisi O">Divisi O</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Divisi P">Divisi P</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Divisi Q">Divisi Q</a></li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-outline-secondary rounded-pill dropdown-toggle" type="button" id="bulanFilterMonitoringBiaya" data-bs-toggle="dropdown" aria-expanded="false" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                                            Pilih Bulan
+                                                        </button>
+                                                        <ul class="dropdown-menu scrollable-dropdown" aria-labelledby="bulanFilterMonitoringBiaya">
+                                                            <li><a class="dropdown-item" href="#" data-value="Januari">Januari</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Februari">Februari</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Maret">Maret</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="April">April</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Mei">Mei</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Juni">Juni</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Juli">Juli</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Agustus">Agustus</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="September">September</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Oktober">Oktober</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="November">November</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="Desember">Desember</a></li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-outline-secondary rounded-pill dropdown-toggle" type="button" id="tahunFilterMonitoringBiaya" data-bs-toggle="dropdown" aria-expanded="false" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                                            Pilih Tahun
+                                                        </button>
+                                                        <ul class="dropdown-menu scrollable-dropdown" aria-labelledby="tahunFilterMonitoringBiaya">
+                                                            <li><a class="dropdown-item" href="#" data-value="2020">2020</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="2021">2021</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="2022">2022</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="2023">2023</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="2024">2024</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="2025">2025</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="2026">2026</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="2027">2027</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="2028">2028</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="2029">2029</a></li>
+                                                            <li><a class="dropdown-item" href="#" data-value="2030">2030</a></li>
+                                                        </ul>
+                                                    </div>
+
+                                                    <button id="btnLihatDataMonitoringBiaya" class="btn rounded-pill" style="background-color: #20288E; color: #FFFFFF; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                                        <i class="bi bi-eye me-2"></i> Lihat Data
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row justify-content-center mt-4 mb-4">
+                                            <div class="col-sm-12">
+                                                <div class="statistics-details-monitoring">
+                                                    <div class="metric-card-monitoring" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                                                        <div class="statistics-title-monitoring">
+                                                            <span class="title-text-monitoring">Total Anggaran</span>
+                                                            <div class="title-icon-monitoring">
+                                                                <i class="mdi mdi-wallet"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="metric-value-monitoring">
+                                                            <span class="metric-unit-monitoring">Anggaran 2024</span>
+                                                        </div>
+                                                        <div class="metric-percentage-monitoring" data-change="up" style="top: 35px; left: 85px; position: relative;">
+                                                            <i class="mdi mdi-trending-up"></i>
+                                                            <span class="percentage-text-monitoring">3.02%</span>
+                                                            <span class="text-2023">dari 2023</span>
+                                                        </div>
+                                                        <div class="metric-amount-monitoring">
+                                                            Rp 20.000.000.000
+                                                        </div>
+                                                        <div class="wave-container-monitoring">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="metric-card-monitoring" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                                                        <div class="statistics-title-monitoring">
+                                                            <span class="title-text-monitoring">Anggaran Terpakai</span>
+                                                            <div class="title-icon-monitoring">
+                                                                <i class="mdi mdi-wallet"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="metric-value-monitoring">
+                                                            <span class="metric-unit-monitoring">Anggaran 2024</span>
+                                                        </div>
+                                                        <div class="metric-amount-monitoring">
+                                                            Rp 2.000.000.000
+                                                        </div>
+                                                        <div class="metric-percentage-monitoring" data-change="down" style="bottom: -35px; right: -85px; position: relative;">
+                                                            <i class="mdi mdi-trending-down"></i>
+                                                            <span class="percentage-text-monitoring">-0.32%</span>
+                                                            <span class="text-2023">dari 2023</span>
+                                                        </div>
+                                                        <div class="wave-container-monitoring">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="metric-card-monitoring" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                                                        <div class="statistics-title-monitoring">
+                                                            <span class="title-text-monitoring">Total Anggaran</span>
+                                                            <div class="title-icon-monitoring">
+                                                                <i class="mdi mdi-wallet"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="metric-value-monitoring">
+                                                            <span class="metric-unit-monitoring">Anggaran 2024</span>
+                                                        </div>
+                                                        <div class="metric-percentage-monitoring" data-change="up" style="top: 35px; left: 85px; position: relative;">
+                                                            <i class="mdi mdi-trending-up"></i>
+                                                            <span class="percentage-text-monitoring">3.02%</span>
+                                                            <span class="text-2023">dari 2023</span>
+                                                        </div>
+                                                        <div class="metric-amount-monitoring">
+                                                            Rp 20.000.000.000
+                                                        </div>
+                                                        <div class="wave-container-monitoring">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="metric-card-monitoring-biaya" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                                                        <div class="statistics-title-monitoring-biaya">
+                                                            <span class="title-text-monitoring-biaya">
+                                                                <span class="gradient-text">Persentase</span>
+                                                            <span class="icon-wrapper">
+                                                                    <i class="mdi mdi-percent"></i>
+                                                                </span>
+                                                            </span>
+                                                        </div>
+
+                                                        <div class="chart-container-monitoring-biaya" style="position: relative; top: 20px; left: 50px;">
+                                                            <canvas id="doughnutChart"></canvas>
+                                                            <div class="chart-center-text-biaya">
+                                                                <div class="chart-label-biaya">Terpakai</div>
+                                                                <div class="chart-value-biaya">77%</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="wave-container-monitoring-biaya">
+                                                            <div class="wave-monitoring-biaya"></div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-6 d-flex flex-column">
+                                                <div class="row flex-grow">
+                                                    <div class="col-12 grid-margin stretch-card">
+                                                        <div class="card card-rounded" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                                            <div class="card-body">
+                                                                <div class="d-sm-flex justify-content-between align-items-start">
+                                                                    <div>
+                                                                        <h4 class="card-title card-title-dash">Trend Pengeluaran Anggaran Per Bulan (2024 shown)</h4>
+                                                                        <p class="subtext">Rp. 57.000.000 <span class="text-success">⬆ 13.02% dari 2023</span></p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="chart-container mt-4">
+                                                                    <canvas id="anggaran"></canvas>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 d-flex flex-column">
+                                                <div class="row flex-grow">
+                                                    <div class="col-12 grid-margin stretch-card">
+                                                        <div class="card card-rounded" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                                            <div class="card-body">
+                                                                <div class="d-sm-flex justify-content-between align-items-start">
+                                                                    <div>
+                                                                        <h4 class="card-title card-title-dash">Trend Pengeluaran Anggaran Per Bulan (2024 shown)</h4>
+                                                                        <p class="subtext">Rp. 57.000.000 <span class="text-success">⬆ 13.02% dari 2023</span></p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="chart-container mt-4">
+                                                                    <canvas id="anggaran2"></canvas>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-lg-12 d-flex flex-column">
+                                                <div class="row flex-grow">
+                                                    <div class="col-12 grid-margin stretch-card">
+                                                        <div class="card card-rounded" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                                            <div class="card-body">
+                                                                <div class="unique-header-card">
+                                                                    <div class="unique-header-content">
+                                                                        <h4 class="unique-header-title">Pengeluaran Anggaran Per Divisi (2024 shown)</h4>
+                                                                        <h3 class="unique-header-amount">Rp. 57.000.000</h3>
+                                                                        <p class="unique-header-percentage text-success">+13.02% dari 2023</p>
+                                                                        <p class="unique-header-subtitle">Pengeluaran dari 1-31 Januari, 2024</p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="row mt-3">
+                                                                    <div class="col-md-9">
+                                                                        <div class="chartjs-bar-wrapper2">
+                                                                            <div style="position: relative; height: 100%; width: 100%;">
+                                                                                <canvas id="anggaranPerDivisi"></canvas>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="compact-card">
+                                                                        <h6 class="compact-title text-center mb-3">Pengeluaran Divisi Tertinggi</h6>
+                                                                        <div class="row">
+                                                                            <div class="col-6 text-center">
+                                                                                <div class="compact-icon-wrapper mb-1">
+                                                                                    <i class="bi bi-wallet2 text-primary"></i>
+                                                                                </div>
+                                                                                <p class="compact-text-primary">SDM</p>
+                                                                                <p class="compact-text-muted">Rp 30 M</p>
+                                                                                <div class="compact-progress">
+                                                                                    <div class="compact-progress-bar" style="width: 80%;"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-6 text-center">
+                                                                                <div class="compact-icon-wrapper mb-1">
+                                                                                    <i class="bi bi-wallet2 text-primary"></i>
+                                                                                </div>
+                                                                                <p class="compact-text-primary">TI</p>
+                                                                                <p class="compact-text-muted">Rp 25 M</p>
+                                                                                <div class="compact-progress">
+                                                                                    <div class="compact-progress-bar" style="width: 70%;"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row mt-3">
+                                                                            <div class="col-6 text-center">
+                                                                                <div class="compact-icon-wrapper mb-1">
+                                                                                    <i class="bi bi-wallet2 text-primary"></i>
+                                                                                </div>
+                                                                                <p class="compact-text-primary">Dafasum</p>
+                                                                                <p class="compact-text-muted">Rp 3 M</p>
+                                                                                <div class="compact-progress">
+                                                                                    <div class="compact-progress-bar" style="width: 20%;"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-6 text-center">
+                                                                                <div class="compact-icon-wrapper mb-1">
+                                                                                    <i class="bi bi-wallet2 text-primary"></i>
+                                                                                </div>
+                                                                                <p class="compact-text-primary">SDM</p>
+                                                                                <p class="compact-text-muted">Rp 2 M</p>
+                                                                                <div class="compact-progress">
+                                                                                    <div class="compact-progress-bar" style="width: 10%;"></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row flex-grow">
+                                                    <div class="col-12 grid-margin stretch-card">
+                                                        <div class="card card-rounded" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                                            <div class="card-body">
+                                                                <div class="d-sm-flex justify-content-between align-items-start">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <div class="title-icon">
+                                                                            <i class="mdi mdi-table"></i>
+                                                                        </div>
+                                                                        <h4 class="card-title card-title-dash ms-2">Pengeluaran By Komponen (2024 shown)</h4>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="table-responsive mt-3" style="max-height: 320px; overflow-y: auto; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                                                                    <table class="table table-striped" style="width: 100%; border-collapse: collapse;">
+                                                                        <thead style="background-color: #162f85;">
+                                                                            <tr>
+                                                                                <th style="color: #FEF9F2; position: sticky; top: 0; background-color: #162f85; z-index: 2; width: 4%;">No</th>
+                                                                                <th style="color: #FEF9F2; position: sticky; top: 0; background-color: #162f85; z-index: 2; width: 12%;">Komponen</th>
+                                                                                <th style="color: #FEF9F2; position: sticky; top: 0; background-color: #162f85; z-index: 2; width: 10%;">Anggaran</th>
+                                                                                <th style="color: #FEF9F2; position: sticky; top: 0; background-color: #162f85; z-index: 2; width: 5%;">Januari</th>
+                                                                                <th style="color: #FEF9F2; position: sticky; top: 0; background-color: #162f85; z-index: 2; width: 5%;">Februari</th>
+                                                                                <th style="color: #FEF9F2; position: sticky; top: 0; background-color: #162f85; z-index: 2; width: 5%;">Maret</th>
+                                                                                <th style="color: #FEF9F2; position: sticky; top: 0; background-color: #162f85; z-index: 2; width: 5%;">April</th>
+                                                                                <th style="color: #FEF9F2; position: sticky; top: 0; background-color: #162f85; z-index: 2; width: 5%;">Mei</th>
+                                                                                <th style="color: #FEF9F2; position: sticky; top: 0; background-color: #162f85; z-index: 2; width: 5%;">Juni</th>
+                                                                                <th style="color: #FEF9F2; position: sticky; top: 0; background-color: #162f85; z-index: 2; width: 5%;">Juli</th>
+                                                                                <th style="color: #FEF9F2; position: sticky; top: 0; background-color: #162f85; z-index: 2; width: 5%;">Agustus</th>
+                                                                                <th style="color: #FEF9F2; position: sticky; top: 0; background-color: #162f85; z-index: 2; width: 5%;">September</th>
+                                                                                <th style="color: #FEF9F2; position: sticky; top: 0; background-color: #162f85; z-index: 2; width: 5%;">Oktober</th>
+                                                                                <th style="color: #FEF9F2; position: sticky; top: 0; background-color: #162f85; z-index: 2; width: 5%;">November</th>
+                                                                                <th style="color: #FEF9F2; position: sticky; top: 0; background-color: #162f85; z-index: 2; width: 8%;">Total Terpakai</th>
+                                                                                <th style="color: #FEF9F2; position: sticky; top: 0; background-color: #162f85; z-index: 2; width: 8%;">Sisa Terpakai</th>
+                                                                                <th style="color: #FEF9F2; position: sticky; top: 0; background-color: #162f85; z-index: 2; width: 6%;">Presentase</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody style="background-color: #FEF9F2;">
+                                                                            <tr>
+                                                                                <td>1</td>
+                                                                                <td>Gaji Pokok</td>
+                                                                                <td>1,000,000</td>
+                                                                                <td>100,000</td>
+                                                                                <td>100,000</td>
+                                                                                <td>100,000</td>
+                                                                                <td>100,000</td>
+                                                                                <td>100,000</td>
+                                                                                <td>100,000</td>
+                                                                                <td>100,000</td>
+                                                                                <td>100,000</td>
+                                                                                <td>100,000</td>
+                                                                                <td>100,000</td>
+                                                                                <td>1,100,000</td>
+                                                                                <td>100,000</td>
+                                                                                <td>-100,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>2</td>
+                                                                                <td>Honorarium</td>
+                                                                                <td>500,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>550,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>-100,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>3</td>
+                                                                                <td>Tunjangan Transport</td>
+                                                                                <td>800,000</td>
+                                                                                <td>80,000</td>
+                                                                                <td>80,000</td>
+                                                                                <td>80,000</td>
+                                                                                <td>80,000</td>
+                                                                                <td>80,000</td>
+                                                                                <td>80,000</td>
+                                                                                <td>80,000</td>
+                                                                                <td>80,000</td>
+                                                                                <td>80,000</td>
+                                                                                <td>80,000</td>
+                                                                                <td>880,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>4</td>
+                                                                                <td>Pajak</td>
+                                                                                <td>300,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>330,000</td>
+                                                                                <td>-30,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>5</td>
+                                                                                <td>Asuransi Kesehatan</td>
+                                                                                <td>450,000</td>
+                                                                                <td>45,000</td>
+                                                                                <td>45,000</td>
+                                                                                <td>45,000</td>
+                                                                                <td>45,000</td>
+                                                                                <td>45,000</td>
+                                                                                <td>45,000</td>
+                                                                                <td>45,000</td>
+                                                                                <td>45,000</td>
+                                                                                <td>45,000</td>
+                                                                                <td>45,000</td>
+                                                                                <td>495,000</td>
+                                                                                <td>-45,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>6</td>
+                                                                                <td>THR</td>
+                                                                                <td>900,000</td>
+                                                                                <td>90,000</td>
+                                                                                <td>90,000</td>
+                                                                                <td>90,000</td>
+                                                                                <td>90,000</td>
+                                                                                <td>90,000</td>
+                                                                                <td>90,000</td>
+                                                                                <td>90,000</td>
+                                                                                <td>90,000</td>
+                                                                                <td>90,000</td>
+                                                                                <td>90,000</td>
+                                                                                <td>990,000</td>
+                                                                                <td>-90,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>7</td>
+                                                                                <td>Biaya Listrik</td>
+                                                                                <td>200,000</td>
+                                                                                <td>20,000</td>
+                                                                                <td>20,000</td>
+                                                                                <td>20,000</td>
+                                                                                <td>20,000</td>
+                                                                                <td>20,000</td>
+                                                                                <td>20,000</td>
+                                                                                <td>20,000</td>
+                                                                                <td>20,000</td>
+                                                                                <td>20,000</td>
+                                                                                <td>20,000</td>
+                                                                                <td>220,000</td>
+                                                                                <td>-20,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>8</td>
+                                                                                <td>Biaya Air</td>
+                                                                                <td>150,000</td>
+                                                                                <td>15,000</td>
+                                                                                <td>15,000</td>
+                                                                                <td>15,000</td>
+                                                                                <td>15,000</td>
+                                                                                <td>15,000</td>
+                                                                                <td>15,000</td>
+                                                                                <td>15,000</td>
+                                                                                <td>15,000</td>
+                                                                                <td>15,000</td>
+                                                                                <td>15,000</td>
+                                                                                <td>165,000</td>
+                                                                                <td>-15,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>9</td>
+                                                                                <td>Internet</td>
+                                                                                <td>300,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>330,000</td>
+                                                                                <td>-30,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>10</td>
+                                                                                <td>Telepon</td>
+                                                                                <td>100,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>110,000</td>
+                                                                                <td>-10,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>11</td>
+                                                                                <td>Maintenance Peralatan</td>
+                                                                                <td>250,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>275,000</td>
+                                                                                <td>-25,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>12</td>
+                                                                                <td>Biaya Pemasaran</td>
+                                                                                <td>400,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>440,000</td>
+                                                                                <td>-40,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>13</td>
+                                                                                <td>Biaya Kantor</td>
+                                                                                <td>350,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>385,000</td>
+                                                                                <td>-35,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>14</td>
+                                                                                <td>Biaya Kebersihan</td>
+                                                                                <td>120,000</td>
+                                                                                <td>12,000</td>
+                                                                                <td>12,000</td>
+                                                                                <td>12,000</td>
+                                                                                <td>12,000</td>
+                                                                                <td>12,000</td>
+                                                                                <td>12,000</td>
+                                                                                <td>12,000</td>
+                                                                                <td>12,000</td>
+                                                                                <td>12,000</td>
+                                                                                <td>12,000</td>
+                                                                                <td>132,000</td>
+                                                                                <td>-12,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>15</td>
+                                                                                <td>Biaya Keamanan</td>
+                                                                                <td>180,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>198,000</td>
+                                                                                <td>-18,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>16</td>
+                                                                                <td>Biaya IT</td>
+                                                                                <td>500,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>550,000</td>
+                                                                                <td>-50,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>17</td>
+                                                                                <td>Biaya Pelatihan</td>
+                                                                                <td>220,000</td>
+                                                                                <td>22,000</td>
+                                                                                <td>22,000</td>
+                                                                                <td>22,000</td>
+                                                                                <td>22,000</td>
+                                                                                <td>22,000</td>
+                                                                                <td>22,000</td>
+                                                                                <td>22,000</td>
+                                                                                <td>22,000</td>
+                                                                                <td>22,000</td>
+                                                                                <td>22,000</td>
+                                                                                <td>242,000</td>
+                                                                                <td>-22,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>18</td>
+                                                                                <td>Biaya Perjalanan</td>
+                                                                                <td>600,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>660,000</td>
+                                                                                <td>-60,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>19</td>
+                                                                                <td>Biaya Marketing Digital</td>
+                                                                                <td>300,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>30,000</td>
+                                                                                <td>330,000</td>
+                                                                                <td>-30,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>20</td>
+                                                                                <td>Biaya Periklanan</td>
+                                                                                <td>400,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>40,000</td>
+                                                                                <td>440,000</td>
+                                                                                <td>-40,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>21</td>
+                                                                                <td>Biaya Konsultasi</td>
+                                                                                <td>350,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>35,000</td>
+                                                                                <td>385,000</td>
+                                                                                <td>-35,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>22</td>
+                                                                                <td>Biaya Rapat</td>
+                                                                                <td>180,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>18,000</td>
+                                                                                <td>198,000</td>
+                                                                                <td>-18,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>23</td>
+                                                                                <td>Biaya Transportasi</td>
+                                                                                <td>250,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>25,000</td>
+                                                                                <td>275,000</td>
+                                                                                <td>-25,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>24</td>
+                                                                                <td>Biaya Pengembangan Produk</td>
+                                                                                <td>500,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>50,000</td>
+                                                                                <td>550,000</td>
+                                                                                <td>-50,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>25</td>
+                                                                                <td>Biaya Sewa</td>
+                                                                                <td>600,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>60,000</td>
+                                                                                <td>660,000</td>
+                                                                                <td>-60,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>26</td>
+                                                                                <td>Biaya Lain-lain</td>
+                                                                                <td>100,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>10,000</td>
+                                                                                <td>110,000</td>
+                                                                                <td>-10,000</td>
+                                                                                <td>-80,000</td>
+                                                                                <td>110%</td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                        <tfoot style="background-color: #E4B1F0; box-shadow: inset 0 0 10px rgba(0,0,0,0.1);">
+                                                                            <tr>
+                                                                                <td colspan="14" style="text-align: right; font-weight: bold; padding: 10px;">
+                                                                                    Total Terpakai Keseluruhan
+                                                                                </td>
+                                                                                <td style="font-weight: bold; padding: 10px;">13,195,000</td>
+                                                                                <td style="font-weight: bold; padding: 10px;">-1,195,000</td>
+                                                                                <td style="font-weight: bold; padding: 10px;">106.9%</td>
+                                                                            </tr>
+                                                                        </tfoot>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="row flex-grow">
+                                                    <div class="col-12 grid-margin stretch-card">
+                                                        <div class="card card-rounded productivity" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                                            <div class="card-body">
+                                                                <div class="d-flex justify-content-between align-items-center">
+                                                                    <h4 class="card-title card-title-dash">Productivity (2024 shown)</h4>
+                                                                </div>
+                                                                <div class="row mt-3">
+                                                                    <div class="col-md-9">
+                                                                        <div style="position: relative; height: 300px; width: 100%;">
+                                                                            <canvas id="productivityChart"></canvas>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-3">
+                                                                        <div class="card legend-card" style="box-shadow: 0 2px 4px rgba(0,0,0,0.08);">
+                                                                            <h6 class="text-center mb-3">Keterangan Diagram</h6>
+                                                                            <ul class="list-unstyled">
+                                                                                <li class="d-flex align-items-center mb-2">
+                                                                                    <span class="legend-circle" style="background-color: #1F3BB3;"></span>
+                                                                                    <span class="ms-2">Revenue</span>
+                                                                                </li>
+                                                                                <li class="d-flex align-items-center mb-2">
+                                                                                    <span class="legend-circle" style="background-color: #6F42C1;"></span>
+                                                                                    <span class="ms-2">Biaya Tenaga Kerja</span>
+                                                                                </li>
+                                                                                <li class="d-flex align-items-center">
+                                                                                    <span class="legend-circle" style="background-color: #D4BEE4;"></span>
+                                                                                    <span class="ms-2">Earn Before Tax</span>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-lg-4 d-flex flex-column">
+                                                        <div class="row flex-grow">
+                                                            <div class="col-12 grid-margin stretch-card">
+                                                                <div class="card card-rounded sbu" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                                                    <div class="card-body">
+                                                                        <div class="d-flex justify-content-center align-items-center">
+                                                                            <h6 class="card-title text-center bg-primary text-white py-1 px-3 rounded" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);">SBU CURRENCY SOLUTION</h6>
+                                                                        </div>
+                                                                        <div class="chart-container mt-4">
+                                                                            <canvas id="currencyChart"></canvas>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4 d-flex flex-column">
+                                                        <div class="row flex-grow">
+                                                            <div class="col-12 grid-margin stretch-card">
+                                                                <div class="card card-rounded sbu" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                                                    <div class="card-body">
+                                                                        <div class="d-flex justify-content-center align-items-center">
+                                                                            <h6 class="card-title text-center bg-primary text-white py-1 px-3 rounded" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);">SBU HIGH SECURITY SOLUTION</h6>
+                                                                        </div>
+                                                                        <div class="chart-container mt-4">
+                                                                            <canvas id="highSecurityChart"></canvas>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4 d-flex flex-column">
+                                                        <div class="row flex-grow">
+                                                            <div class="col-12 grid-margin stretch-card">
+                                                                <div class="card card-rounded sbu" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                                                    <div class="card-body">
+                                                                        <div class="d-flex justify-content-center align-items-center">
+                                                                            <h6 class="card-title text-center bg-primary text-white py-1 px-3 rounded" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);">SBU DIGITAL</h6>
+                                                                        </div>
+                                                                        <div class="chart-container mt-4">
+                                                                            <canvas id="digitalChart"></canvas>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-12">
+                                                        <div class="header-bar card-rounded bg-white p-2" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                                            <h5 class="text-center text-primary fw-bold mb-0">TREND CORPORATE EMPLOYEE PRODUCTIVITY</h5>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row justify-content-center mt-4">
+                                                    <div class="col-lg-4 col-md-6 col-sm-12 d-flex flex-column">
+                                                        <div class="card card-rounded employe" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                                            <div class="card-body">
+                                                                <h6 class="text-center bg-primary text-white py-1 px-3 rounded" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);">SBU CURRENCY SOLUTION</h6>
+                                                                <div class="chart-container mt-4" style="position: relative; height: 200px;">
+                                                                    <canvas id="employeDonutChart1"></canvas>
+                                                                </div>
+                                                                <div class="row mt-3">
+                                                                    <div class="col-6 text-center">
+                                                                        <h5 class="text-primary mb-1">60%</h5>
+                                                                        <p class="text-muted">Karyawan Tetap</p>
+                                                                    </div>
+                                                                    <div class="col-6 text-center">
+                                                                        <h5 class="text-primary mb-1">40%</h5>
+                                                                        <p class="text-muted">Karyawan Kontrak</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-6 col-sm-12 d-flex flex-column mt-4 mt-md-0">
+                                                        <div class="card card-rounded employe" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                                            <div class="card-body">
+                                                                <h6 class="text-center bg-primary text-white py-1 px-3 rounded" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);">SBU CURRENCY SOLUTION</h6>
+                                                                <div class="chart-container mt-4" style="position: relative; height: 200px;">
+                                                                    <canvas id="employeDonutChart2"></canvas>
+                                                                </div>
+                                                                <div class="row mt-3">
+                                                                    <div class="col-6 text-center">
+                                                                        <h5 class="text-primary mb-1">60%</h5>
+                                                                        <p class="text-muted">Karyawan Tetap</p>
+                                                                    </div>
+                                                                    <div class="col-6 text-center">
+                                                                        <h5 class="text-primary mb-1">40%</h5>
+                                                                        <p class="text-muted">Karyawan Kontrak</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-6 col-sm-12 d-flex flex-column mt-4 mt-md-0">
+                                                        <div class="card card-rounded employe" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                                                            <div class="card-body">
+                                                                <h6 class="text-center bg-primary text-white py-1 px-3 rounded" style="box-shadow: 0 2px 4px rgba(0,0,0,0.1);">SBU CURRENCY SOLUTION</h6>
+                                                                <div class="chart-container mt-4" style="position: relative; height: 200px;">
+                                                                    <canvas id="employeDonutChart3"></canvas>
+                                                                </div>
+                                                                <div class="row mt-3">
+                                                                    <div class="col-6 text-center">
+                                                                        <h5 class="text-primary mb-1">60%</h5>
+                                                                        <p class="text-muted">Karyawan Tetap</p>
+                                                                    </div>
+                                                                    <div class="col-6 text-center">
+                                                                        <h5 class="text-primary mb-1">40%</h5>
+                                                                        <p class="text-muted">Karyawan Kontrak</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Monitoring Biaya Content Ends -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Monitoring Biaya Content Ends -->
+                        </div>
+                        <!-- content-wrapper ends -->
+                        <!-- Footer -->
+                        <footer class="footer mt-4">
+                            <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                                <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Premium <a href="https://www.bootstrapdash.com/" target="_blank">Bootstrap admin template</a> from BootstrapDash.</span>
+                                <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2021. All rights reserved.</span>
+                            </div>
+                        </footer>
+                        <!-- End Footer -->
+                    </div>
+                    <!-- main-panel ends -->
+                </div>
+                <!-- page-body-wrapper ends -->
+            </div>
+            <!-- container-scroller -->
+            <!-- Bootstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <!-- plugins:js -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <!-- Bootstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+            <!-- Other JS plugins -->
+            <script src="../vendors/js/vendor.bundle.base.js"></script>
+            <!-- End inject -->
+
+            <!-- Plugin js for this page -->
+
+            <script src="../vendors/chart.js/Chart.min.js"></script>
+            <script src="../vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+            <script src="../vendors/progressbar.js/progressbar.min.js"></script>
+
+            <!-- inject:js -->
+            <script src="../js/off-canvas.js"></script>
+            <script src="/js/mb.js"></script>
+            <script src="../js/hoverable-collapse.js"></script>
+            <script src="../js/template.js"></script>
+            <script src="../js/settings.js"></script>
+            <script src="../js/todolist.js"></script>
+            <!-- End inject -->
+
+            <!-- Custom js for this page-->
+
+            <script src="../js/dashboard.js"></script>
+            <script src="../js/Chart.roundedBarCharts.js"></script>
+            <!-- End custom js for this page-->
+
+            <!-- JavaScript for Mobile Dropdown Navigation -->
+            <script>
+                document.querySelectorAll('.dropdown-item').forEach(item => {
+                    item.addEventListener('click', function(event) {
+                        event.stopPropagation();
+                        window.location.href = this.getAttribute('href');
+                    });
+                });
+                document.getElementById('mobileTabSelect').addEventListener('change', function() {
+                    var selectedOption = this.options[this.selectedIndex];
+                    var href = selectedOption.getAttribute('href');
+                    if (href) {
+                        window.location.href = href;
+                    }
+                });
+
+                document.addEventListener('DOMContentLoaded', function() {
+                    const elements = document.querySelectorAll('.navbar, .tab-container, .tab-item, .metric-card-monitoring, .metric-card-monitoring-biaya, .card, .footer, .unique-header-card, .header-bar, .employe, .sbu');
+                    elements.forEach((el, index) => {
+                        el.style.opacity = '0';
+                        el.style.transition = 'opacity 0.5s ease-out';
+                        setTimeout(() => {
+                            el.classList.add('animate__animated', 'animate__fadeInUp');
+                            el.style.opacity = '1';
+                        }, index * 200);
+                    });
+                });
+            </script>
+</body>
+
+</html>

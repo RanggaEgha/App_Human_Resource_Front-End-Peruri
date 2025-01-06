@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SDMO Login</title>
+    <link rel="shortcut icon" href="/images/Logo.svg" />
+
+    <!-- Styles -->
+    <style>
+        /* Nonaktifkan scroll pada html dan body */
+        
+        html,
+        body {
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(35deg, #20288e, #c893fd);
+        }
+        
+        .login-section {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease forwards;
+            max-width: 600px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo img {
+            max-width: 150px;
+            height: auto;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.5s;
+        }
+        
+        h2 {
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 1.8em;
+            text-align: left;
+            transition: text-align 0.5s;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.7s;
+        }
+        
+        #dynamic-text {
+            transition: opacity 0.5s;
+        }
+        
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.9s;
+        }
+        
+        .login-form label {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .login-form input {
+            padding: 12px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            width: 100%;
+        }
+        
+        .login-form button {
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            background: #20288e;
+            color: white;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        
+        .login-form button:hover {
+            background-color: #1a1f6e;
+        }
+        
+        .forgot-password {
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 1.1s;
+        }
+        
+        .forgot-password a {
+            color: #4285f4;
+            text-decoration: none;
+            font-size: 0.95em;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.3s;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .forgot-password a:hover {
+            color: #306acb;
+        }
+        
+        .forgot-password a svg {
+            margin-right: 8px;
+            width: 15px;
+            height: 15px;
+            fill: #4285f4;
+            transition: fill 0.3s;
+        }
+        
+        .forgot-password a:hover svg {
+            fill: #306acb;
+        }
+        /* Animasi keyframes */
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Modal Styles */
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            animation: fadeInUp 0.5s ease;
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            padding: 20px 30px;
+            border: 1px solid #888;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            position: relative;
+            animation: slideInDown 0.5s ease;
+        }
+        
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+        }
+        
+        .modal-content h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .modal-content input[type='email'] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+        
+        .modal-content button {
+            width: 100%;
+            padding: 12px;
+            background-color: #20288e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .modal-content button:hover {
+            background-color: #1a1f6e;
+        }
+        
+        .success-message {
+            display: none;
+            text-align: center;
+            color: green;
+            margin-top: 15px;
+        }
+        /* Toast Styles */
+        
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+            z-index: 1001;
+            overflow: hidden;
+            width: 300px;
+        }
+        
+        .toast.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .toast-icon {
+            margin-right: 16px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .toast-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+        
+        .toast-message {
+            flex: 1;
+            font-size: 1em;
+            font-weight: 500;
+        }
+        
+        .toast-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 0%;
+            transition: width 3s linear;
+        }
+        
+        .toast-close {
+            margin-left: 16px;
+            cursor: pointer;
+            font-size: 1.2em;
+            line-height: 1;
+            transition: color 0.3s;
+        }
+        
+        .toast-close:hover {
+            color: #ddd;
+        }
+        /* Tambahan CSS untuk password visibility toggle */
+        
+        .password-container {
+            position: relative;
+        }
+        
+        .password-container input {
+            width: 100%;
+            padding-right: 40px;
+        }
+        
+        .toggle-password {
+            position: absolute;
+            top: 42%;
+            /* Disesuaikan dari 50% menjadi 46% */
+            right: 12px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .toggle-password svg {
+            width: 24px;
+            height: 24px;
+            fill: #333;
+            transition: fill 0.3s;
+        }
+        
+        .toggle-password:hover svg {
+            fill: #000;
+        }
+        
+        .toggle-password svg.hidden {
+            display: none;
+        }
+        /* Menyembunyikan ikon mata bawaan browser */
+        
+        input[type='password']::-ms-reveal,
+        input[type='password']::-ms-clear,
+        input[type='password']::-webkit-textfield-decoration-container,
+        input[type='password']::-webkit-credentials-auto-fill-button,
+        input[type='password']::-webkit-autofill-button,
+        input[type='password']::-webkit-search-cancel-button,
+        input[type='password']::-webkit-search-decoration {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-section">
+        <div class="logo">
+            <img src="/images/logo-dark.svg" alt="Logo Peruri" />
+        </div>
+        <!-- Tambahkan id untuk elemen h2 -->
+        <h2 id="title">
+            <span id="login-text">Login</span>
+            <span id="dynamic-text">Human Resource</span>
+        </h2>
+
+        <!-- Form login dengan label -->
+        <form class="login-form" id="login-form">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email" required />
+
+            <label for="password">Password</label>
+            <!-- Mulai perubahan di sini -->
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Password" required />
+                <span class="toggle-password">
+            <!-- Ikon mata dan mata tertutup -->
+            <svg
+              id="eye-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 4.5C7.305 4.5 3.266 7.311 1.5 12c1.766 4.689 5.805 7.5 10.5 7.5s8.734-2.811 10.5-7.5C20.734 7.311 16.695 4.5 12 4.5zm0 12a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z"
+              ></path>
+              <circle cx="12" cy="12" r="2.5"></circle>
+            </svg>
+            <svg
+              id="eye-slash-icon"
+              class="hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 6c1.654 0 3 1.346 3 3 0 .085-.021.163-.025.246l3.716 3.716c.846-1.004 1.56-2.178 2.032-3.462C19.25 6.754 15.914 4.5 12 4.5c-.8 0-1.58.1-2.332.283l1.789 1.789C11.837 6.024 11.918 6 12 6zM2.707 2.293l1.414 1.414 1.814 1.814C4.383 7.036 3.048 9.381 1.5 12c1.766 4.689 5.805 7.5 10.5 7.5 1.948 0 3.815-.492 5.477-1.36l1.316 1.316 1.414-1.414L4.121 2.293 2.707 2.293zM12 17.5c-3.18 0-6.042-1.823-7.538-4.5.876-1.666 2.142-3.051 3.684-4.018L9.1 10.396a3.004 3.004 0 0 0 4.504 4.504l1.451 1.451C13.927 17.09 12.988 17.5 12 17.5z"
+              ></path>
+            </svg>
+          </span>
+            </div>
+            <!-- Akhir perubahan -->
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Teks "Forget password?" yang diperindah -->
+        <div class="forgot-password">
+            <a id="forgot-password-link">
+                <!-- Contoh menggunakan ikon kunci SVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M400 224h-24v-72C376 68.92 307.1 0 224 0S72 68.92 72 152v72H48C21.53 224 0 245.5 0 272v192C0 490.5 21.53 512 48 512h352c26.47 0 48-21.53 48-48v-192C448 245.5 426.5 224 400 224zM144 152c0-44.11 35.89-80 80-80s80 35.89 80 80v72H144V152z"
+            />
+          </svg> Forget password?
+            </a>
+        </div>
+    </div>
+
+    <!-- Modal for Forgot Password -->
+    <div id="forgot-password-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="modal-close">&times;</span>
+            <h2>Reset Password</h2>
+            <form id="forgot-password-form">
+                <label for="reset-email">Email</label>
+                <input type="email" id="reset-email" placeholder="Masukkan email Anda" required />
+                <button type="submit">Kirim Instruksi</button>
+                <div class="success-message" id="success-message">
+                    Jika email terdaftar, instruksi reset password telah dikirim.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <div class="toast-icon">
+            <!-- Icon sukses menggunakan SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+          <path
+            d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c9.373-9.373 9.373-24.569 0-33.941l-22.627-22.627c-9.373-9.373-24.569-9.373-33.941 0L216 308.118 157.254 249.373c-9.373-9.373-24.569-9.373-33.941 0L100.686 271c-9.373 9.373-9.373 24.569 0 33.941l128 128c9.373 9.372 24.569 9.372 33.941-.001z"
+          />
+        </svg>
+        </div>
+        <div class="toast-message">
+            Login berhasil!
+        </div>
+        <div class="toast-progress"></div>
+        <div class="toast-close" id="toast-close">&times;</div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Dynamic Text Functionality
+        const dynamicTexts = [
+            'Human Resource',
+            'Human Resource Officer',
+            'Smart Loket',
+            'All In One Form',
+        ]
+
+        let currentIndex = 0
+        const dynamicTextElement = document.getElementById('dynamic-text')
+        const loginTextElement = document.getElementById('login-text') // Ambil elemen "Login"
+        const titleElement = document.getElementById('title') // Ambil elemen h2
+
+        function changeText() {
+            dynamicTextElement.style.opacity = 0 // Mulai fade-out
+            setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % dynamicTexts.length
+                    dynamicTextElement.textContent = dynamicTexts[currentIndex]
+                    dynamicTextElement.style.opacity = 1 // Mulai fade-in
+
+                    // Jika teks adalah "All In One Form", sembunyikan "Login" dan pusatkan teks
+                    if (dynamicTexts[currentIndex] === 'All In One Form') {
+                        loginTextElement.style.display = 'none'
+                        titleElement.style.textAlign = 'center'
+                    } else {
+                        loginTextElement.style.display = 'inline'
+                        titleElement.style.textAlign = 'left'
+                    }
+                }, 500) // Tunggu hingga fade-out selesai (0.5 detik)
+        }
+
+        // Ganti teks setiap 3 detik (3000 milidetik)
+        setInterval(changeText, 3000)
+
+        // Modal Functionality
+        const forgotPasswordLink = document.getElementById('forgot-password-link')
+        const modal = document.getElementById('forgot-password-modal')
+        const modalClose = document.getElementById('modal-close')
+        const forgotPasswordForm = document.getElementById('forgot-password-form')
+        const successMessage = document.getElementById('success-message')
+
+        // Buka modal ketika link diklik
+        forgotPasswordLink.addEventListener('click', (e) => {
+            e.preventDefault()
+            modal.style.display = 'flex'
+        })
+
+        // Tutup modal ketika tombol close diklik
+        modalClose.addEventListener('click', () => {
+            modal.style.display = 'none'
+            resetModal()
+        })
+
+        // Tutup modal ketika pengguna mengklik di luar konten modal
+        window.addEventListener('click', (e) => {
+            if (e.target == modal) {
+                modal.style.display = 'none'
+                resetModal()
+            }
+        })
+
+        // Tangani pengiriman formulir reset password
+        forgotPasswordForm.addEventListener('submit', (e) => {
+            e.preventDefault()
+            const email = document.getElementById('reset-email').value
+
+            // Validasi sederhana email (bisa ditingkatkan)
+            if (validateEmail(email)) {
+                // Di sini Anda bisa menambahkan logika untuk mengirim email reset password
+                // Misalnya, melakukan permintaan AJAX ke backend
+
+                // Untuk demo, kita hanya menampilkan pesan sukses
+                successMessage.style.display = 'block'
+                forgotPasswordForm.reset()
+
+                // Sembunyikan pesan setelah beberapa detik
+                setTimeout(() => {
+                    successMessage.style.display = 'none'
+                    modal.style.display = 'none'
+                }, 3000)
+            } else {
+                showToast('Silakan masukkan alamat email yang valid.', 'error')
+            }
+        })
+
+        // Fungsi validasi email sederhana
+        function validateEmail(email) {
+            const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\\.,;:\s@"]+\.)+[^<>()[\]\\.,;:\s@"]{2,})$/i
+            return re.test(String(email).toLowerCase())
+        }
+
+        // Reset modal state
+        function resetModal() {
+            successMessage.style.display = 'none'
+            forgotPasswordForm.reset()
+        }
+
+        // Toast Functionality
+        const toast = document.getElementById('toast')
+        const toastClose = document.getElementById('toast-close')
+
+        function showToast(message, type = 'success') {
+            const toastMessage = toast.querySelector('.toast-message')
+            const toastProgress = toast.querySelector('.toast-progress')
+
+            toastMessage.textContent = message
+
+            // Ubah warna gradien berdasarkan tipe toast jika diperlukan
+            if (type === 'error') {
+                toast.style.background =
+                    'linear-gradient(135deg, #FF416C 0%, #FF4B2B 100%)' // Merah
+            } else if (type === 'warning') {
+                toast.style.background =
+                    'linear-gradient(135deg, #F7971E 0%, #FFD200 100%)' // Oranye
+            } else {
+                toast.style.background =
+                    'linear-gradient(135deg, #6A11CB 0%, #2575FC 100%)' // Biru (default success)
+            }
+
+            toast.classList.add('show')
+
+            // Atur ulang progress bar
+            toastProgress.style.width = '0%'
+            void toastProgress.offsetWidth
+            toastProgress.style.width = '100%'
+
+            // Otomatis menghilang setelah 3 detik
+            setTimeout(() => {
+                toast.classList.remove('show')
+                    // Reset warna gradien ke default
+                if (type === 'error') {
+                    toast.style.background =
+                        'linear-gradient(135deg, #FF416C 0%, #FF4B2B 100%)'
+                } else if (type === 'warning') {
+                    toast.style.background =
+                        'linear-gradient(135deg, #F7971E 0%, #FFD200 100%)'
+                } else {
+                    toast.style.background =
+                        'linear-gradient(135deg, #6A11CB 0%, #2575FC 100%)'
+                }
+            }, 3000)
+        }
+
+        // Tutup toast ketika tombol close diklik
+        toastClose.addEventListener('click', () => {
+            toast.classList.remove('show')
+        })
+
+        // Login Form Functionality
+        const loginForm = document.getElementById('login-form')
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault() // Mencegah pengiriman form secara default
+
+            const email = document.getElementById('email').value
+            const password = document.getElementById('password').value
+
+            // Validasi sederhana (contoh: cek jika field tidak kosong)
+            if (validateEmail(email) && password.trim() !== '') {
+                // Di sini Anda bisa menambahkan logika untuk memverifikasi kredensial dengan backend
+
+                // Untuk demo, kita anggap login selalu berhasil
+                showToast('Login berhasil!', 'success')
+
+                // Navigasikan ke halaman berikutnya setelah sedikit delay untuk melihat toast
+                setTimeout(() => {
+                        window.location.href = '/fasilitas-karyawan.html'
+                    }, 1500) // 1.5 detik
+            } else {
+                showToast('Silakan masukkan email dan password yang valid.', 'error')
+            }
+        })
+
+        // Tambahkan JavaScript untuk toggle password visibility
+        const togglePassword = document.querySelector('.toggle-password')
+        const passwordInput = document.getElementById('password')
+        const eyeIcon = document.getElementById('eye-icon')
+        const eyeSlashIcon = document.getElementById('eye-slash-icon')
+
+        togglePassword.addEventListener('click', () => {
+            const type =
+                passwordInput.getAttribute('type') === 'password' ?
+                'text' :
+                'password'
+            passwordInput.setAttribute('type', type)
+
+            if (type === 'text') {
+                eyeIcon.classList.add('hidden')
+                eyeSlashIcon.classList.remove('hidden')
+            } else {
+                eyeIcon.classList.remove('hidden')
+                eyeSlashIcon.classList.add('hidden')
+            }
+        })
+    </script>
+</body>
+
+</html>

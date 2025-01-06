@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Dashboard Kekuatan Pegawai</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../vendors/feather/feather.css" />
+    <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css" />
+    <link
+      rel="stylesheet"
+      href="../vendors/simple-line-icons/css/simple-line-icons.css"
+    />
+    <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css" />
+    <link
+      rel="stylesheet"
+      href="../vendors/datatables.net-bs4/dataTables.bootstrap4.css"
+    />
+    <link rel="stylesheet" href="../css/vertical-layout-light/style.css" />
+    <link
+      rel="stylesheet"
+      href="../css/vertical-layout-light/kekuatan-style.css"
+    />
+    <link rel="shortcut icon" href="/images/Logo.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/animate.css/animate.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container-scroller">
+      <nav
+        class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row"
+      >
+        <div
+          class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start"
+        >
+          <div class="me-3">
+            <button
+              class="navbar-toggler navbar-toggler align-self-center"
+              type="button"
+              data-bs-toggle="minimize"
+            >
+              <span class="icon-menu"></span>
+            </button>
+          </div>
+          <div>
+            <a
+              class="navbar-brand brand-logo"
+              href="../fasilitas-karyawan.html"
+            >
+              <img src="../images/logo-dark.svg" alt="logo" />
+            </a>
+            <a
+              class="navbar-brand brand-logo-mini"
+              href="../fasilitas-karyawan.html"
+            >
+              <img
+                src="../images/PERURI MASTER LOGOGRAM (WARNA).svg"
+                alt="logo"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-top">
+          <ul class="navbar-nav">
+            <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+              <div class="d-flex align-items-center">
+                <img
+                  src="../images/file-icons/icon/icon-dashboard.png"
+                  alt="Icon"
+                  class="me-2"
+                  style="width: 23px;"
+                />
+                <h1
+                  class="h4 mb-0"
+                  id="navbarTitle"
+                  style="
+                    background: linear-gradient(
+                      180deg,
+                      #20288e 0%,
+                      #0083ff 100%
+                    );
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                  "
+                >
+                  Dashboard Kekuatan Pegawai
+                </h1>
+              </div>
+              <h3 class="h6 text-muted mt-3">
+                Hai,
+                <span class="fw-bold text-dark">Admin</span>
+              </h3>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
+                aria-labelledby="countDropdown"
+              >
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item preview-item">
+                  <div class="preview-thumbnail">
+                    <img
+                      src="../images/faces/face10.jpg"
+                      alt="image"
+                      class="img-sm profile-pic"
+                    />
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+              <a
+                class="nav-link"
+                id="UserDropdown"
+                href="#"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                style="
+                  display: inline-block;
+                  padding: 2px;
+                  border-radius: 50%;
+                  background: linear-gradient(45deg, #c893fd, #8e5fd9);
+                "
+              >
+                <img
+                  src="../images/faces/face11.jpg"
+                  alt="Profile image"
+                  style="
+                    width: 55px;
+                    height: 55px;
+                    display: block;
+                    border-radius: 50%;
+                    border: 2px solid white;
+                  "
+                />
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-right navbar-dropdown"
+                aria-labelledby="UserDropdown"
+              >
+                <div class="dropdown-header text-center">
+                  <div
+                    style="
+                      display: inline-block;
+                      padding: 2px;
+                      border-radius: 50%;
+                      background: linear-gradient(45deg, #c893fd, #8e5fd9);
+                    "
+                  >
+                    <img
+                      class="img-md rounded-circle"
+                      src="../images/faces/face11.jpg"
+                      alt="Profile image"
+                      style="border-radius: 50%; border: 2px solid white;"
+                    />
+                  </div>
+                  <p class="mb-1 mt-3 font-weight-semibold">Admin</p>
+                  <p class="fw-light text-muted mb-0">
+                    ranggaegha25022003@gmail.com
+                  </p>
+                </div>
+                <a
+                  href="/pages/my-profile.html"
+                  target="_blank"
+                  class="dropdown-item"
+                >
+                  <i
+                    class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"
+                  ></i>
+                  My Profile
+                </a>
+                <a href="/login.html" class="dropdown-item">
+                  <i
+                    class="dropdown-item-icon mdi mdi-power text-primary me-2"
+                  ></i>
+                  Sign Out
+                </a>
+              </div>
+            </li>
+          </ul>
+          <button
+            class="navbar-toggler navbar-toggler-right d-lg-none align-self-center"
+            type="button"
+            data-bs-toggle="offcanvas"
+          >
+            <span class="mdi mdi-menu"></span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="container-fluid page-body-wrapper">
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="home-tab">
+                  <div
+                    class="container d-flex justify-content-center flex-column"
+                  >
+                    <div class="tab-container d-none d-md-flex">
+                      <a
+                        href="/fasilitas-karyawan.html"
+                        class="tab-item"
+                        style="text-decoration: none; color: inherit;"
+                      >
+                        <i class="bi bi-bar-chart"></i>
+                        Fasilitas Karyawan
+                      </a>
+                      <a
+                        href="/pages/monitoring-biaya.html"
+                        class="tab-item"
+                        style="text-decoration: none; color: inherit;"
+                      >
+                        <i class="bi bi-bar-chart"></i>
+                        Monitoring Biaya
+                      </a>
+                      <a
+                        href="/pages/kekuatan-pegawai.html"
+                        class="tab-item active"
+                        style="text-decoration: none; color: inherit;"
+                      >
+                        <i class="bi bi-bar-chart"></i>
+                        Kekuatan Pegawai
+                      </a>
+                    </div>
+                    <div class="tab-dropdown d-md-none mt-3">
+                      <select class="form-select" id="mobileTabSelect">
+                        <option
+                          value="fasilitas"
+                          href="fasilitas-karyawan.html"
+                        >
+                          Fasilitas Karyawan
+                        </option>
+                        <option
+                          value="monitoring"
+                          href="/pages/monitoring-biaya.html"
+                        >
+                          Monitoring Biaya
+                        </option>
+                        <option
+                          value="kekuatan"
+                          href="/pages/kekuatan-pegawai.html"
+                          selected
+                        >
+                          Kekuatan Pegawai
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="tab-content tab-content-basic">
+                    <div class="tab-pane active" id="kekuatan">
+                      <div
+                        class="d-sm-flex align-items-center justify-content-between border-bottom"
+                      >
+                        <div>
+                          <div
+                            class="btn-wrapper d-flex flex-column flex-md-row gap-2 mt-4 ms-4"
+                          >
+                            <div class="dropdown">
+                              <button
+                                class="btn btn-outline-secondary rounded-pill dropdown-toggle"
+                                type="button"
+                                id="divisiFilterKekuatanPegawai"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                Pilih Divisi
+                              </button>
+                              <ul
+                                class="dropdown-menu scrollable-dropdown"
+                                aria-labelledby="divisiFilterKekuatanPegawai"
+                              >
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Divisi A"
+                                  >
+                                    Divisi A
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Divisi B"
+                                  >
+                                    Divisi B
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Divisi C"
+                                  >
+                                    Divisi C
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Divisi D"
+                                  >
+                                    Divisi D
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Divisi E"
+                                  >
+                                    Divisi E
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Divisi F"
+                                  >
+                                    Divisi F
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Divisi G"
+                                  >
+                                    Divisi G
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Divisi H"
+                                  >
+                                    Divisi H
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Divisi I"
+                                  >
+                                    Divisi I
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Divisi J"
+                                  >
+                                    Divisi J
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Divisi K"
+                                  >
+                                    Divisi K
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Divisi L"
+                                  >
+                                    Divisi L
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Divisi M"
+                                  >
+                                    Divisi M
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Divisi N"
+                                  >
+                                    Divisi N
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Divisi O"
+                                  >
+                                    Divisi O
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Divisi P"
+                                  >
+                                    Divisi P
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Divisi Q"
+                                  >
+                                    Divisi Q
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <div class="dropdown">
+                              <button
+                                class="btn btn-outline-secondary rounded-pill dropdown-toggle"
+                                type="button"
+                                id="bulanFilterKekuatanPegawai"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                Pilih Bulan
+                              </button>
+                              <ul
+                                class="dropdown-menu scrollable-dropdown"
+                                aria-labelledby="bulanFilterKekuatanPegawai"
+                              >
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Januari"
+                                  >
+                                    Januari
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Februari"
+                                  >
+                                    Februari
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Maret"
+                                  >
+                                    Maret
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="April"
+                                  >
+                                    April
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Mei"
+                                  >
+                                    Mei
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Juni"
+                                  >
+                                    Juni
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Juli"
+                                  >
+                                    Juli
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Agustus"
+                                  >
+                                    Agustus
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="September"
+                                  >
+                                    September
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Oktober"
+                                  >
+                                    Oktober
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="November"
+                                  >
+                                    November
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="Desember"
+                                  >
+                                    Desember
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <div class="dropdown">
+                              <button
+                                class="btn btn-outline-secondary rounded-pill dropdown-toggle"
+                                type="button"
+                                id="tahunFilterKekuatanPegawai"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                Pilih Tahun
+                              </button>
+                              <ul
+                                class="dropdown-menu scrollable-dropdown"
+                                aria-labelledby="tahunFilterKekuatanPegawai"
+                              >
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="2020"
+                                  >
+                                    2020
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="2021"
+                                  >
+                                    2021
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="2022"
+                                  >
+                                    2022
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="2023"
+                                  >
+                                    2023
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="2024"
+                                  >
+                                    2024
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="2025"
+                                  >
+                                    2025
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="2026"
+                                  >
+                                    2026
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="2027"
+                                  >
+                                    2027
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="2028"
+                                  >
+                                    2028
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="2029"
+                                  >
+                                    2029
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-value="2030"
+                                  >
+                                    2030
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <button
+                              id="btnLihatDataKekuatanPegawai"
+                              class="btn rounded-pill"
+                              style="background-color: #20288e; color: #ffffff;"
+                            >
+                              <i class="bi bi-eye me-2"></i>
+                              Lihat Data
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row flex-grow mt-4">
+                        <div class="sdm-card-rounded sdm-title-card">
+                          <h5>DIVISI SDM ~ PERUM PERURI ~ OKTOBER 2024</h5>
+                        </div>
+                        <div class="col-12 grid-margin stretch-card">
+                          <div
+                            class="card card-rounded divisi-sdm"
+                            style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+                          >
+                            <div class="card-body">
+                              <div
+                                class="d-flex justify-content-between align-items-center mb-4"
+                              >
+                                <h4 class="card-title card-title-dash">
+                                  Statistics
+                                </h4>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-8">
+                                  <h6 class="text-muted">Total Karyawan</h6>
+                                  <div
+                                    class="table-wrapper p-3 border rounded bg-light"
+                                    style="
+                                      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                                      overflow-x: hidden;
+                                    "
+                                  >
+                                    <div
+                                      class="table-responsive custom-scrollbar"
+                                      style="
+                                        max-height: 320px;
+                                        overflow-y: auto;
+                                      "
+                                    >
+                                      <table
+                                        class="table table-bordered mt-3"
+                                        style="width: 100%; table-layout: auto;"
+                                      >
+                                        <thead>
+                                          <tr>
+                                            <th style="padding: 8px;">PKWTT</th>
+                                            <th style="padding: 8px;">PKWT</th>
+                                            <th style="padding: 8px;">
+                                              PKWT Terampil
+                                            </th>
+                                            <th style="padding: 8px;">
+                                              Magang
+                                            </th>
+                                            <th style="padding: 8px;">
+                                              Pro Hire
+                                            </th>
+                                            <th style="padding: 8px;">SPBE</th>
+                                            <th style="padding: 8px;">
+                                              Govtech
+                                            </th>
+                                            <th style="padding: 8px;">KCA</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>120</td>
+                                            <td>40</td>
+                                            <td>50</td>
+                                            <td>60</td>
+                                            <td>90</td>
+                                            <td>120</td>
+                                            <td>340</td>
+                                            <td>120</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col-md-4 mt-4 mt-md-0">
+                                  <div
+                                    class="chart-wrapper p-3 border rounded bg-light"
+                                    style="
+                                      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                                    "
+                                  >
+                                    <h6 class="text-muted fw-bold">
+                                      Pie Chart
+                                    </h6>
+                                    <div class="d-flex align-items-start mt-3">
+                                      <div
+                                        class="chart-container"
+                                        style="
+                                          position: relative;
+                                          height: 150px;
+                                          width: 150px;
+                                        "
+                                      >
+                                        <canvas id="divisiSdmChart"></canvas>
+                                      </div>
+                                      <ul
+                                        class="list-unstyled ms-4"
+                                        style="flex: 1;"
+                                      >
+                                        <li
+                                          class="d-flex align-items-center mb-2"
+                                        >
+                                          <span
+                                            class="legend-circle"
+                                            style="
+                                              background-color: rgb(
+                                                63,
+                                                47,
+                                                237
+                                              );
+                                              width: 12px;
+                                              height: 12px;
+                                              display: inline-block;
+                                              border-radius: 50%;
+                                            "
+                                          ></span>
+                                          <span class="ms-2 fw-bold text-dark">
+                                            PKWTT
+                                          </span>
+                                          <span class="ms-auto text-muted">
+                                            39.11%
+                                          </span>
+                                        </li>
+                                        <li
+                                          class="d-flex align-items-center mb-2"
+                                        >
+                                          <span
+                                            class="legend-circle"
+                                            style="
+                                              background-color: rgb(
+                                                82,
+                                                97,
+                                                247
+                                              );
+                                              width: 12px;
+                                              height: 12px;
+                                              display: inline-block;
+                                              border-radius: 50%;
+                                            "
+                                          ></span>
+                                          <span class="ms-2 fw-bold text-dark">
+                                            PKWT
+                                          </span>
+                                          <span class="ms-auto text-muted">
+                                            28.02%
+                                          </span>
+                                        </li>
+                                        <li
+                                          class="d-flex align-items-center mb-2"
+                                        >
+                                          <span
+                                            class="legend-circle"
+                                            style="
+                                              background-color: rgb(
+                                                146,
+                                                155,
+                                                247
+                                              );
+                                              width: 18px;
+                                              height: 11px;
+                                              display: inline-block;
+                                              border-radius: 50%;
+                                            "
+                                          ></span>
+                                          <span class="ms-2 fw-bold text-dark">
+                                            PKWT Terampil
+                                          </span>
+                                          <span class="ms-auto text-muted">
+                                            23.13%
+                                          </span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                          <span
+                                            class="legend-circle"
+                                            style="
+                                              background-color: rgb(
+                                                199,
+                                                203,
+                                                247
+                                              );
+                                              width: 12px;
+                                              height: 11px;
+                                              display: inline-block;
+                                              border-radius: 50%;
+                                            "
+                                          ></span>
+                                          <span class="ms-2 fw-bold text-dark">
+                                            Magang
+                                          </span>
+                                          <span class="ms-auto text-muted">
+                                            5.03%
+                                          </span>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row flex-grow">
+                      <div class="col-12 grid-margin stretch-card">
+                        <div
+                          class="card card-rounded divisi-sdm"
+                          style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+                        >
+                          <div class="card-body">
+                            <div
+                              class="d-flex justify-content-between align-items-center mb-4"
+                            >
+                              <h4 class="card-title card-title-dash">
+                                Statistics
+                              </h4>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-md-8">
+                                <h6 class="text-muted">Karyawan per Divisi</h6>
+                                <div
+                                  class="chart-container"
+                                  style="position: relative; height: 350px;"
+                                >
+                                  <canvas id="divisiSdmBarChart"></canvas>
+                                </div>
+                              </div>
+
+                              <div class="col-md-4 mt-4 mt-md-0">
+                                <div
+                                  class="chart-wrapper p-3 border rounded bg-light"
+                                  style="
+                                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                                  "
+                                >
+                                  <h6 class="text-muted fw-bold">
+                                    Jumlah Karyawan
+                                  </h6>
+                                  <div
+                                    class="chart-container mt-3"
+                                    style="position: relative; height: 150px;"
+                                  >
+                                    <canvas id="divisiSdmPieChart"></canvas>
+                                  </div>
+                                  <ul class="list-unstyled mt-4">
+                                    <li class="d-flex align-items-center mb-2">
+                                      <span
+                                        class="legend-circle"
+                                        style="background-color: #962dff;"
+                                      ></span>
+                                      <span class="ms-2 fw-bold text-dark">
+                                        PKWTT
+                                      </span>
+                                      <span class="ms-auto text-muted">
+                                        39.11%
+                                      </span>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-2">
+                                      <span
+                                        class="legend-circle"
+                                        style="background-color: #c893fd;"
+                                      ></span>
+                                      <span class="ms-2 fw-bold text-dark">
+                                        PKWT
+                                      </span>
+                                      <span class="ms-auto text-muted">
+                                        28.02%
+                                      </span>
+                                    </li>
+                                    <li class="d-flex align-items-center mb-2">
+                                      <span
+                                        class="legend-circle"
+                                        style="background-color: #e0c6fd;"
+                                      ></span>
+                                      <span class="ms-2 fw-bold text-dark">
+                                        PKWT Terampil
+                                      </span>
+                                      <span class="ms-auto text-muted">
+                                        23.13%
+                                      </span>
+                                    </li>
+                                    <li class="d-flex align-items-center">
+                                      <span
+                                        class="legend-circle"
+                                        style="background-color: #f0e5fc;"
+                                      ></span>
+                                      <span class="ms-2 fw-bold text-dark">
+                                        Magang
+                                      </span>
+                                      <span class="ms-auto text-muted">
+                                        5.03%
+                                      </span>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                      <div class="col-lg-6 d-flex flex-column">
+                        <div
+                          class="card card-rounded"
+                          style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+                        >
+                          <div class="card-body">
+                            <h4 class="card-title">Statistics</h4>
+                            <h6 class="text-muted">Pangkat</h6>
+                            <div
+                              class="chart-container"
+                              style="position: relative; height: 300px;"
+                            >
+                              <canvas id="rankChart"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 d-flex flex-column mt-4 mt-md-0">
+                        <div
+                          class="card card-rounded"
+                          style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+                        >
+                          <div class="card-body">
+                            <h4 class="card-title">Statistics</h4>
+                            <h6 class="text-muted">Pendidikan</h6>
+                            <div
+                              class="chart-container"
+                              style="position: relative; height: 300px;"
+                            >
+                              <canvas id="educationChart"></canvas>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row justify-content-center mt-4">
+                      <div class="col-lg-6 d-flex flex-column">
+                        <div
+                          class="card card-rounded"
+                          style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+                        >
+                          <div class="card-body">
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <h4 class="card-title">Statistics</h4>
+                              <div class="dropdown">
+                                <button
+                                  class="btn btn-light dropdown-toggle"
+                                  type="button"
+                                  id="dropdownMenuButton"
+                                  data-bs-toggle="dropdown"
+                                  aria-expanded="false"
+                                  style="
+                                    color: #0b192c;
+                                    transition: all 0.3s ease;
+                                  "
+                                >
+                                  Pilih Produksi
+                                </button>
+                                <ul
+                                  class="dropdown-menu"
+                                  aria-labelledby="dropdownMenuButton"
+                                >
+                                  <li>
+                                    <a
+                                      class="dropdown-item"
+                                      href="#"
+                                      style="
+                                        color: #0b192c;
+                                        transition: all 0.3s ease;
+                                      "
+                                    >
+                                      Produksi LK
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="dropdown-item"
+                                      href="#"
+                                      style="
+                                        color: #0b192c;
+                                        transition: all 0.3s ease;
+                                      "
+                                    >
+                                      Produksi PR
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <h6 class="text-muted">Jenis Kelamin</h6>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div
+                                  class="chart-container"
+                                  style="position: relative; height: 150px;"
+                                >
+                                  <canvas id="jenisKelaminChart"></canvas>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                  <li
+                                    class="d-flex justify-content-between align-items-center"
+                                  >
+                                    <span>
+                                      <span
+                                        class="legend-circle"
+                                        style="
+                                          background-color: rgb(63, 47, 237);
+                                        "
+                                      ></span>
+                                      Produksi LK
+                                    </span>
+                                    <span>
+                                      39.11%
+                                      <span class="text-success">(+2.98%)</span>
+                                    </span>
+                                  </li>
+                                  <li
+                                    class="d-flex justify-content-between align-items-center"
+                                  >
+                                    <span>
+                                      <span
+                                        class="legend-circle"
+                                        style="
+                                          background-color: rgb(82, 97, 247);
+                                        "
+                                      ></span>
+                                      Produksi PR
+                                    </span>
+                                    <span>
+                                      28.02%
+                                      <span class="text-danger">(-3.25%)</span>
+                                    </span>
+                                  </li>
+                                  <li
+                                    class="d-flex justify-content-between align-items-center"
+                                  >
+                                    <span>
+                                      <span
+                                        class="legend-circle"
+                                        style="
+                                          background-color: rgb(146, 155, 247);
+                                        "
+                                      ></span>
+                                      Non Produksi LK
+                                    </span>
+                                    <span>
+                                      23.13%
+                                      <span class="text-success">(+0.14%)</span>
+                                    </span>
+                                  </li>
+                                  <li
+                                    class="d-flex justify-content-between align-items-center"
+                                  >
+                                    <span>
+                                      <span
+                                        class="legend-circle"
+                                        style="
+                                          background-color: rgb(199, 203, 247);
+                                        "
+                                      ></span>
+                                      Non Produksi PR
+                                    </span>
+                                    <span>
+                                      5.03%
+                                      <span class="text-danger">(-1.11%)</span>
+                                    </span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-6 d-flex flex-column mt-4 mt-md-0">
+                        <div
+                          class="card card-rounded"
+                          style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+                        >
+                          <div class="card-body">
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <h4 class="card-title">Statistics</h4>
+                              <div class="dropdown">
+                                <button
+                                  class="btn btn-light dropdown-toggle"
+                                  type="button"
+                                  id="dropdownMenuButton2"
+                                  data-bs-toggle="dropdown"
+                                  aria-expanded="false"
+                                  style="
+                                    color: #0b192c;
+                                    transition: all 0.3s ease;
+                                  "
+                                >
+                                  Pilih Agama
+                                </button>
+                                <ul
+                                  class="dropdown-menu"
+                                  aria-labelledby="dropdownMenuButton2"
+                                >
+                                  <li>
+                                    <a
+                                      class="dropdown-item"
+                                      href="#"
+                                      style="
+                                        color: #0b192c;
+                                        transition: all 0.3s ease;
+                                      "
+                                    >
+                                      Islam
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="dropdown-item"
+                                      href="#"
+                                      style="
+                                        color: #0b192c;
+                                        transition: all 0.3s ease;
+                                      "
+                                    >
+                                      Kristen
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="dropdown-item"
+                                      href="#"
+                                      style="
+                                        color: #0b192c;
+                                        transition: all 0.3s ease;
+                                      "
+                                    >
+                                      Katholik
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="dropdown-item"
+                                      href="#"
+                                      style="
+                                        color: #0b192c;
+                                        transition: all 0.3s ease;
+                                      "
+                                    >
+                                      Hindu
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="dropdown-item"
+                                      href="#"
+                                      style="
+                                        color: #0b192c;
+                                        transition: all 0.3s ease;
+                                      "
+                                    >
+                                      Buddha
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="dropdown-item"
+                                      href="#"
+                                      style="
+                                        color: #0b192c;
+                                        transition: all 0.3s ease;
+                                      "
+                                    >
+                                      Khonghucu
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <h6 class="text-muted">Agama</h6>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div
+                                  class="chart-container"
+                                  style="position: relative; height: 150px;"
+                                >
+                                  <canvas id="agamaChart"></canvas>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                  <li
+                                    class="d-flex justify-content-between align-items-center"
+                                  >
+                                    <span>
+                                      <span
+                                        class="legend-circle"
+                                        style="
+                                          background-color: rgb(63, 47, 237);
+                                        "
+                                      ></span>
+                                      Islam
+                                    </span>
+                                    <span>
+                                      39.11%
+                                      <span class="text-success">(+2.98%)</span>
+                                    </span>
+                                  </li>
+                                  <li
+                                    class="d-flex justify-content-between align-items-center"
+                                  >
+                                    <span>
+                                      <span
+                                        class="legend-circle"
+                                        style="
+                                          background-color: rgb(82, 97, 247);
+                                        "
+                                      ></span>
+                                      Kristen
+                                    </span>
+                                    <span>
+                                      28.02%
+                                      <span class="text-danger">(-3.25%)</span>
+                                    </span>
+                                  </li>
+                                  <li
+                                    class="d-flex justify-content-between align-items-center"
+                                  >
+                                    <span>
+                                      <span
+                                        class="legend-circle"
+                                        style="
+                                          background-color: rgb(146, 155, 247);
+                                        "
+                                      ></span>
+                                      Katholik
+                                    </span>
+                                    <span>
+                                      23.13%
+                                      <span class="text-success">(+0.14%)</span>
+                                    </span>
+                                  </li>
+                                  <li
+                                    class="d-flex justify-content-between align-items-center"
+                                  >
+                                    <span>
+                                      <span
+                                        class="legend-circle"
+                                        style="
+                                          background-color: rgb(199, 203, 247);
+                                        "
+                                      ></span>
+                                      Hindu
+                                    </span>
+                                    <span>
+                                      5.03%
+                                      <span class="text-danger">(-1.11%)</span>
+                                    </span>
+                                  </li>
+                                  <li
+                                    class="d-flex justify-content-between align-items-center"
+                                  >
+                                    <span>
+                                      <span
+                                        class="legend-circle"
+                                        style="background-color: #9b7ebd;"
+                                      ></span>
+                                      Buddha
+                                    </span>
+                                    <span>
+                                      5.03%
+                                      <span class="text-danger">(-1.11%)</span>
+                                    </span>
+                                  </li>
+                                  <li
+                                    class="d-flex justify-content-between align-items-center"
+                                  >
+                                    <span>
+                                      <span
+                                        class="legend-circle"
+                                        style="
+                                          background-color: rgb(201, 203, 207);
+                                        "
+                                      ></span>
+                                      Khonghucu
+                                    </span>
+                                    <span>
+                                      5.03%
+                                      <span class="text-danger">(-1.11%)</span>
+                                    </span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row flex-grow mt-4">
+                      <div class="col-12 grid-margin stretch-card">
+                        <div
+                          class="card card-rounded"
+                          style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"
+                        >
+                          <div class="card-body">
+                            <div
+                              class="d-flex justify-content-between align-items-center mb-4"
+                            >
+                              <h4 class="card-title card-title-dash">
+                                Statistics
+                              </h4>
+                              <div class="dropdown">
+                                <button
+                                  class="btn btn-light dropdown-toggle"
+                                  type="button"
+                                  id="dropdownDirektorat"
+                                  data-bs-toggle="dropdown"
+                                  aria-expanded="false"
+                                  style="color: #0b192c;"
+                                >
+                                  Short by: Direktorat
+                                </button>
+                                <ul
+                                  class="dropdown-menu"
+                                  aria-labelledby="dropdownDirektorat"
+                                >
+                                  <li>
+                                    <a
+                                      class="dropdown-item"
+                                      href="javascript:void(0);"
+                                      data-filter="Direktorat Pengembangan Usaha"
+                                    >
+                                      Direktorat Pengembangan Usaha
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="dropdown-item"
+                                      href="javascript:void(0);"
+                                      data-filter="Strategic Business Unit"
+                                    >
+                                      Strategic Business Unit
+                                    </a>
+                                  </li>
+                                  <li>
+                                    <a
+                                      class="dropdown-item"
+                                      href="javascript:void(0);"
+                                      data-filter="Government Digital Planning"
+                                    >
+                                      Government Digital Planning
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+
+                            <h6 id="direktoratSubTitle" class="text-muted">
+                              Direktorat Pengembangan Usaha
+                            </h6>
+                            <p class="text-success">Karyawan per 2024</p>
+                            <div class="table-responsive">
+                              <table class="table table-bordered">
+                                <thead style="background-color: #20288e;">
+                                  <tr>
+                                    <th style="color: #fbfbfb;">NO</th>
+                                    <th style="color: #fbfbfb;">NAMA DIVISI</th>
+                                    <th style="color: #fbfbfb;">SEPTEMBER</th>
+                                  </tr>
+                                </thead>
+                                <tbody id="direktoratTableBody">
+                                  <tr>
+                                    <td>1</td>
+                                    <td>Direktorat Pengembangan Usaha</td>
+                                    <td>14</td>
+                                  </tr>
+                                  <tr>
+                                    <td>2</td>
+                                    <td>
+                                      Strategic Business Unit Digital and
+                                      Certificate Authority
+                                    </td>
+                                    <td>25</td>
+                                  </tr>
+                                  <tr>
+                                    <td>3</td>
+                                    <td>
+                                      Government Digital Planning and
+                                      Architecture Division
+                                    </td>
+                                    <td>11</td>
+                                  </tr>
+                                  <tr>
+                                    <td>4</td>
+                                    <td>
+                                      Government Digital Solution and Service
+                                      Division
+                                    </td>
+                                    <td>11</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Akhir dari konten Kekuatan Pegawai -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div
+          class="d-sm-flex justify-content-center justify-content-sm-between"
+        >
+          <span
+            class="text-muted text-center text-sm-left d-block d-sm-inline-block"
+          >
+            Premium
+            <a href="https://www.bootstrapdash.com/" target="_blank">
+              Bootstrap admin template
+            </a>
+            from BootstrapDash.
+          </span>
+          <span
+            class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"
+          >
+            Copyright © 2021. All rights reserved.
+          </span>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendors/js/vendor.bundle.base.js"></script>
+    <script src="../vendors/chart.js/Chart.min.js"></script>
+    <script src="../vendors/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="../vendors/progressbar.js/progressbar.min.js"></script>
+    <script src="../js/off-canvas.js"></script>
+    <script src="../js/hoverable-collapse.js"></script>
+    <script src="../js/template.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/todolist.js"></script>
+    <script src="../js/kp.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/Chart.roundedBarCharts.js"></script>
+    <script>
+      document.querySelectorAll('.dropdown-item').forEach((item) => {
+        item.addEventListener('click', function (event) {
+          event.stopPropagation()
+          window.location.href = this.getAttribute('href')
+        })
+      })
+      document
+        .getElementById('mobileTabSelect')
+        .addEventListener('change', function () {
+          var selectedOption = this.options[this.selectedIndex]
+          var href = selectedOption.getAttribute('data-href')
+          if (href) {
+            window.location.href = href
+          }
+        })
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const elements = document.querySelectorAll(
+          '.navbar, .tab-container, .tab-item, .card, .footer, .sdm-title-card, .divisi-sdm',
+        )
+        elements.forEach((el, index) => {
+          el.style.opacity = '0'
+          el.style.transition = 'opacity 0.5s ease-out'
+          setTimeout(() => {
+            el.classList.add('animate__animated', 'animate__fadeInUp')
+            el.style.opacity = '1'
+          }, index * 200)
+        })
+      })
+    </script>
+  </body>
+</html>

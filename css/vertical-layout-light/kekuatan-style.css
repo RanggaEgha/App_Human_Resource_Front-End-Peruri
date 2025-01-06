@@ -1,0 +1,154 @@
+.sdm-card-rounded {
+    border-radius: 12px;
+    background: #20288E;
+    border: 1px solid rgba(228, 177, 240, 0.4);
+    box-shadow: 0 8px 16px rgba(32, 40, 142, 0.2), 0 3px 6px rgba(32, 40, 142, 0.1), inset 0 -4px 12px rgba(255, 255, 255, 0.1), inset 0 4px 12px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.sdm-card-rounded::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: 0.5s;
+}
+
+.sdm-card-rounded:hover::before {
+    left: 100%;
+}
+
+.sdm-card-rounded:hover {
+    box-shadow: 0 12px 24px rgba(32, 40, 142, 0.25), 0 6px 10px rgba(32, 40, 142, 0.15), inset 0 -4px 12px rgba(255, 255, 255, 0.15), inset 0 4px 12px rgba(255, 255, 255, 0.25);
+}
+
+.sdm-title-card {
+    width: 43%;
+    margin-bottom: 12px;
+    text-align: center;
+    position: relative;
+    left: 0;
+    margin-left: 35px;
+    padding: 1rem 1.2rem;
+}
+
+.sdm-title-card h5 {
+    color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.8px;
+    line-height: 1.4;
+    font-size: 0.95em;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+* Styling Scrollbar untuk WebKit Browsers */ .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* Styling Scrollbar untuk Firefox */
+
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
+}
+
+
+/* Optional: Styling untuk tabel agar lebih responsif dan menarik */
+
+.table-wrapper {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.table-wrapper table th,
+.table-wrapper table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table-wrapper table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    color: #FFFFFF;
+    background-color: #20288E;
+}
+
+.bg-primary {
+    background-color: #162f85 !important;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.table thead th {
+    text-align: center;
+    font-weight: bold;
+}
+
+.table tbody td {
+    text-align: center;
+}
+
+.legend-circle {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.card-rounded {
+    border-radius: 8px;
+    background: #fff;
+    padding: 20px;
+}
+
+.chart-container {
+    height: 300px;
+    width: 100%;
+}
+
+.legend-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    font-size: 14px;
+    color: #6B778C;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}

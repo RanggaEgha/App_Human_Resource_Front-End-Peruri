@@ -1,0 +1,789 @@
+ /* Slim scrollbar untuk Chrome, Edge, dan Safari */
+ 
+ .table-responsive::-webkit-scrollbar {
+     width: 8px;
+ }
+ 
+ .table-responsive::-webkit-scrollbar-track {
+     background: #f1f1f1;
+ }
+ 
+ .table-responsive::-webkit-scrollbar-thumb {
+     background: #888;
+     border-radius: 4px;
+ }
+ 
+ .table-responsive::-webkit-scrollbar-thumb:hover {
+     background: #555;
+ }
+ /* Slim scrollbar untuk Firefox */
+ 
+ .table-responsive {
+     scrollbar-width: thin;
+     scrollbar-color: #888 #f1f1f1;
+ }
+ /* Membatasi tinggi dropdown dan menambahkan scroll */
+ 
+ .dropdown-menu.scrollable-dropdown {
+     max-height: 110px;
+     /* Sesuaikan tinggi sesuai kebutuhan (misalnya 5 item x 40px) */
+     overflow-y: auto;
+ }
+ /* Styling Scrollbar Modern untuk Webkit (Chrome, Safari, Edge) */
+ 
+ .scrollable-dropdown::-webkit-scrollbar {
+     width: 8px;
+ }
+ 
+ .scrollable-dropdown::-webkit-scrollbar-track {
+     background: #f1f1f1;
+     border-radius: 4px;
+ }
+ 
+ .scrollable-dropdown::-webkit-scrollbar-thumb {
+     background-color: #888;
+     border-radius: 4px;
+     border: 2px solid #f1f1f1;
+ }
+ 
+ .scrollable-dropdown::-webkit-scrollbar-thumb:hover {
+     background-color: #555;
+ }
+ /* Styling Scrollbar Modern untuk Firefox */
+ 
+ .scrollable-dropdown {
+     scrollbar-width: thin;
+     scrollbar-color: #888 #f1f1f1;
+ }
+ /* Optional: Mengubah tampilan scrollbar pada hover */
+ 
+ .scrollable-dropdown:hover {
+     scrollbar-color: #555 #f1f1f1;
+ }
+ 
+ .wave-container-monitoring {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 30px;
+     z-index: 1;
+     background-image: url('/images/file-icons/icon/wave.png');
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+     background-position: center;
+ }
+ 
+ .wave-monitoring {
+     position: absolute;
+     bottom: 7px;
+     /* Mengatur posisi wave ke atas/bawah */
+     left: 0;
+     width: 100%;
+     height: 100px;
+     transform: scale(2.2, 2.0);
+     /* Scale untuk mengatur ketinggian gelombang (Y, X) */
+ }
+ 
+ .metric-percentage-monitoring {
+     display: flex;
+     align-items: center;
+     font-size: 10px;
+     font-weight: bold;
+     text-align: right;
+ }
+ /* Warna indikator naik dan turun */
+ 
+ .metric-percentage-monitoring[data-change="up"] {
+     color: #32D3AC;
+     /* Warna hijau untuk kenaikan */
+ }
+ 
+ .metric-percentage-monitoring[data-change="down"] {
+     color: #FF6B6B;
+     /* Warna merah untuk penurunan */
+ }
+ 
+ .metric-percentage-monitoring i {
+     font-size: 10px;
+     margin-right: 4px;
+     /* Jarak antara ikon dan teks */
+ }
+ /* Warna khusus untuk teks "dari 2023" */
+ 
+ .text-2023 {
+     color: #9E9E9E;
+     margin-left: 8px;
+     /* Atur jarak antar teks, sesuaikan sesuai kebutuhan */
+ }
+ /* Kelas posisi fleksibel per pixel (contoh) */
+ 
+ .metric-percentage-monitoring.position-top-5 {
+     top: -5px;
+     position: relative;
+ }
+ 
+ .metric-percentage-monitoring.position-bottom-10 {
+     bottom: -10px;
+     position: relative;
+ }
+ 
+ .metric-percentage-monitoring.position-left-10 {
+     left: 10px;
+     position: relative;
+ }
+ 
+ .metric-percentage-monitoring.position-right-15 {
+     right: 15px;
+     position: relative;
+ }
+ 
+ .metric-amount-monitoring {
+     position: absolute;
+     bottom: 42px;
+     left: 17px;
+     right: 0;
+     font-size: 23px;
+     font-weight: 600;
+     color: #20288E;
+     /* Sesuaikan warna */
+     z-index: 2;
+ }
+ 
+ .metric-unit-monitoring {
+     font-size: 13px;
+     color: #9E9E9E;
+     margin-left: 6px;
+     font-weight: 400;
+ }
+ 
+ .metric-value-monitoring {
+     transform: translateY(-8px);
+     /* Sesuaikan nilai ini untuk menggeser metric-value ke atas */
+     font-size: 25px;
+     font-weight: 700;
+     color: #1A237E;
+     display: flex;
+     align-items: baseline;
+ }
+ 
+ .chart-title-monitoring .mdi {
+     color: #1a237e;
+     font-size: 1.2rem;
+     margin-right: 8px;
+ }
+ 
+ .title-icon-monitoring {
+     width: 24px;
+     height: 24px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #20288E;
+     background-color: #EDE7F6;
+     border-radius: 50%;
+     padding: 5px;
+     flex-shrink: 0;
+ }
+ 
+ .title-icon-monitoring i {
+     font-size: 16px;
+     /* Ukuran icon */
+     line-height: 1;
+     /* Memastikan alignment yang tepat */
+ }
+ 
+ @media (max-width: 768px) {
+     .title-text-monitoring {
+         font-size: 20px;
+         line-height: 1.4;
+         padding-bottom: 3px;
+     }
+ }
+ 
+ .title-text-monitoring {
+     font-size: 24px;
+     font-weight: 600;
+     margin: 0;
+     background: linear-gradient(180deg, #20288E 0%, #0083FF 100%);
+     -webkit-background-clip: text;
+     background-clip: text;
+     color: transparent;
+     -webkit-text-fill-color: transparent;
+     line-height: 1.5;
+     /* Menambah line height */
+     padding-bottom: 5px;
+     /* Menambah padding bottom */
+ }
+ 
+ .title-text-monitoring {
+     font-size: 20px;
+     font-weight: 500;
+     color: #333;
+     margin: 0;
+     line-height: 24px;
+     display: flex;
+     align-items: center;
+ }
+ 
+ .statistics-title-monitoring {
+     display: flex;
+     align-items: center;
+     gap: 4px;
+     /* Kurangi gap antara text dan icon */
+     margin-bottom: 8px;
+     color: #1A237E;
+ }
+ 
+ .metric-card-monitoring {
+     width: calc(26% - 30px);
+     height: 140px;
+     /* Kurangi tinggi card */
+     background: #FFFFFF;
+     border-radius: 20px !important;
+     /* Sesuaikan border radius */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     /* Tambahkan shadow */
+     /* Perhalus shadow */
+     padding: 20px;
+     /* Sesuaikan padding */
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     overflow: hidden;
+ }
+ 
+ .statistics-details-monitoring {
+     flex-wrap: wrap;
+     display: flex;
+     gap: 20px;
+     padding: 1px;
+     width: 100%;
+     justify-content: space-between;
+ }
+ 
+ .statistics-details-monitoring::-webkit-scrollbar {
+     height: 6px;
+ }
+ 
+ .statistics-details-monitoring::-webkit-scrollbar-track {
+     background: #f1f1f1;
+     border-radius: 3px;
+ }
+ 
+ .statistics-details-monitoring::-webkit-scrollbar-thumb {
+     background: #dadada;
+     border-radius: 3px;
+ }
+ 
+ .statistics-details-monitoring::-webkit-scrollbar-thumb:hover {
+     background: #999;
+ }
+ /* Responsive adjustments */
+ 
+ @media (min-width: 1200px) {
+     .statistics-details-monitoring {
+         max-width: 1140px;
+         margin: 0 auto;
+     }
+ }
+ 
+ @media (max-width: 1199px) {
+     .statistics-details-monitoring {
+         overflow-x: auto;
+         justify-content: flex-start;
+         padding-bottom: 12px;
+         margin-left: 50px;
+     }
+     .metric-card-monitoring {
+         flex: 0 0 auto;
+         width: 248px;
+         /* Fixed width untuk mobile scroll */
+     }
+ }
+ 
+ .metric-card-monitoring-biaya {
+     width: 260px;
+     height: 148px;
+     background: #FFFFFF;
+     border-radius: 25px;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+     padding: 20px;
+     position: relative;
+     overflow: hidden;
+ }
+ 
+ .statistics-title-monitoring-biaya {
+     text-align: center;
+     margin-bottom: 18px;
+ }
+ 
+ .gradient-text {
+     background: linear-gradient(180deg, #20288E 0%, #0083FF 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-clip: text;
+     color: transparent;
+ }
+ 
+ .title-text-monitoring-biaya {
+     font-size: 18px;
+     font-weight: 500;
+     color: #23278A;
+ }
+ 
+ .icon-wrapper {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #F3F0FF;
+     border-radius: 50%;
+     width: 23px;
+     height: 23px;
+ }
+ 
+ .icon-wrapper i {
+     color: #20288E;
+     /* warna ungu untuk icon */
+     font-size: 16px;
+ }
+ 
+ .element.style {
+     position: relative;
+     top: -20px;
+     left: 40px;
+ }
+ 
+ .chart-container-monitoring-biaya {
+     position: relative !important;
+     top: -20px !important;
+     left: 65px !important;
+     width: 200px;
+     height: 200px;
+ }
+ 
+ #doughnutChart {
+     position: relative;
+     width: 45% !important;
+     height: 45% !important;
+     z-index: 2;
+ }
+ /* Style untuk teks di tengah chart */
+ 
+ .chart-center-text-biaya {
+     position: absolute;
+     top: 25%;
+     left: 23%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+     z-index: 3;
+     pointer-events: none;
+ }
+ 
+ .chart-label-biaya {
+     font-size: 8.4px;
+     color: #666;
+     margin-bottom: 4px;
+ }
+ 
+ .chart-value-biaya {
+     font-size: 14px;
+     font-weight: bold;
+     color: #20288E;
+ }
+ /* Tambahkan wrapper untuk posisi chart */
+ 
+ .chart-position-wrapper {
+     position: absolute;
+     /* Absolute untuk positioning bebas */
+     /* Atur posisi default */
+     top: 0;
+     left: 0;
+     /* Dimensi sama dengan container chart */
+     width: 200px;
+     height: 200px;
+ }
+ /* Menggunakan CSS wave yang sebelumnya */
+ 
+ .wave-container-monitoring-biaya {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: 30px;
+     z-index: 1;
+     background-image: url('/images/file-icons/icon/wave.png');
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+     background-position: center;
+ }
+ 
+ .wave-monitoring-biaya {
+     position: absolute;
+     bottom: 7px;
+     left: 0;
+     width: 100%;
+     height: 100px;
+     transform: scale(2.2, 2.0);
+ }
+ 
+ .compact-card {
+     background-color: #fff;
+     border: 1px solid #ddd;
+     border-radius: 6px;
+     padding: 15px;
+     box-shadow: none;
+     position: absolute;
+     top: 50px;
+     right: 40px;
+     width: 220px;
+ }
+ 
+ .compact-card:hover {
+     border-color: #4a90e2;
+     /* Mengubah warna border saat hover */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     /* Menambahkan bayangan saat hover */
+ }
+ 
+ .compact-title {
+     font-size: 16px;
+     font-weight: bold;
+     color: #333;
+     margin-bottom: 15px;
+     text-align: center;
+ }
+ 
+ .compact-icon-wrapper {
+     display: none;
+     /* Menyembunyikan ikon untuk tampilan lebih sederhana */
+ }
+ 
+ .compact-text-primary {
+     color: #555;
+     font-size: 14px;
+     font-weight: 500;
+     margin-top: 5px;
+     margin-bottom: 2px;
+     transition: color 0.3s ease;
+     /* Menambahkan transisi untuk efek hover */
+ }
+ 
+ .compact-progress {
+     background-color: #e6e6e6;
+     border-radius: 3px;
+     height: 6px;
+     overflow: hidden;
+     margin-bottom: 15px;
+ }
+ 
+ .compact-progress-bar {
+     background-color: #4a90e2;
+     height: 100%;
+     border-radius: 3px;
+     transition: width 0.3s ease, background-color 0.3s ease;
+     /* Transisi untuk animasi */
+ }
+ 
+ .col-6:hover .compact-text-primary {
+     color: #4a90e2;
+     /* Mengubah warna teks saat hover */
+ }
+ 
+ .col-6:hover .compact-progress-bar {
+     background-color: #357ABD;
+     /* Mengubah warna progress bar saat hover */
+ }
+ 
+ .row {
+     display: flex;
+     flex-wrap: wrap;
+     margin: 0 -10px;
+ }
+ 
+ .col-6 {
+     width: 50%;
+     padding: 0 10px;
+     box-sizing: border-box;
+     margin-bottom: 20px;
+ }
+ 
+ .text-center {
+     text-align: center;
+ }
+ 
+ @media (max-width: 576px) {
+     .compact-card {
+         position: static;
+         width: 100%;
+         margin-top: 20px;
+         max-height: none;
+     }
+     .compact-title {
+         font-size: 14px;
+     }
+     .compact-text-primary {
+         font-size: 12px;
+     }
+     .compact-text-muted {
+         font-size: 11px;
+     }
+     .compact-progress {
+         height: 4px;
+     }
+ }
+ 
+ .compact-title {
+     font-size: 12px;
+     font-weight: 600;
+     color: #1F3BB3;
+     margin-bottom: 8px;
+ }
+ 
+ .compact-icon-wrapper {
+     width: 35px;
+     height: 35px;
+     background-color: #EAF1FF;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 0 auto;
+ }
+ 
+ .compact-text-primary {
+     color: #1F3BB3;
+     font-size: 10px;
+     font-weight: 600;
+     margin-top: 5px;
+     margin-bottom: 2px;
+ }
+ 
+ .compact-text-muted {
+     color: #6B778C;
+     font-size: 12px;
+     margin-bottom: 5px;
+ }
+ 
+ .compact-progress {
+     background-color: #F0F0F0;
+     border-radius: 4px;
+     height: 3px;
+     overflow: hidden;
+ }
+ 
+ .compact-progress-bar {
+     background-color: #1F3BB3;
+     height: 100%;
+     border-radius: 4px;
+ }
+ 
+ #anggaranPerDivisi {
+     width: 530px;
+     height: 600px;
+ }
+ 
+ .card-title-dash {
+     font-size: 18px;
+     font-weight: bold;
+ }
+ 
+ .title-icon i {
+     font-size: 20px;
+     color: #20288E;
+ }
+ 
+ .table-striped tbody tr:nth-of-type(odd) {
+     background-color: #f8f9fa;
+ }
+ 
+ .table-striped tbody tr:nth-of-type(even) {
+     background-color: #ffffff;
+ }
+ 
+ .table th {
+     text-align: center;
+     font-weight: bold;
+     vertical-align: middle;
+ }
+ 
+ .table td {
+     text-align: center;
+     vertical-align: middle;
+ }
+ 
+ thead tr th {
+     color: #FEF9F2;
+     background-color: #162f85;
+     /* Warna biru */
+     text-align: center;
+ }
+ 
+ @media (max-width: 768px) {
+     .card-title-dash {
+         font-size: 16px;
+         /* Ukuran font lebih kecil untuk layar sedang */
+         text-align: left;
+         /* Rata kiri di layar kecil */
+     }
+     .d-sm-flex {
+         flex-direction: column;
+         /* Elemen berurutan vertikal pada layar kecil */
+         align-items: flex-start;
+         /* Rata kiri pada elemen vertikal */
+     }
+     .title-icon {
+         margin-bottom: 10px;
+         /* Beri jarak antara ikon dan teks */
+     }
+ }
+ 
+ .productivity {
+     border: none;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .productivity .card-title-dash {
+     font-size: 18px;
+     font-weight: bold;
+     margin: 0;
+ }
+ 
+ .productivity .legend-card {
+     padding: 10px;
+     border: 1px solid #E0E0E0;
+     border-radius: 5px;
+     background-color: #F9F9F9;
+ }
+ 
+ .productivity .legend-circle {
+     width: 12px;
+     height: 12px;
+     border-radius: 50%;
+     display: inline-block;
+ }
+ 
+ .productivity .list-unstyled {
+     padding-left: 0;
+     list-style: none;
+ }
+ 
+ .productivity canvas {
+     display: block;
+     max-height: 100%;
+     max-width: 100%;
+ }
+ 
+ .sbu {
+     border: none;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .sbu .card-title {
+     font-size: 14px;
+     font-weight: bold;
+     margin: 0;
+     text-transform: uppercase;
+ }
+ 
+ .sbu .bg-primary {
+     background-color: #162f85 !important;
+ }
+ 
+ .sbu .chart-container {
+     position: relative;
+     height: 200px;
+     width: 100%;
+ }
+ 
+ .sbu canvas {
+     display: block;
+     max-width: 100%;
+     height: auto;
+ }
+ /* Styling Header */
+ 
+ .header-bar {
+     border-radius: 10px;
+     background-color: #f5f5f5;
+     /* Warna background header */
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     /* Shadow halus */
+     padding: 10px 20px;
+ }
+ 
+ .header-bar h5 {
+     color: #162f85;
+     /* Warna teks biru */
+     font-weight: bold;
+     font-size: 16px;
+     text-transform: uppercase;
+     margin: 0;
+ }
+ /* Styling untuk Kartu */
+ 
+ .employe {
+     border: none;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .employe h6 {
+     font-size: 14px;
+     font-weight: bold;
+     margin: 0;
+     text-transform: uppercase;
+ }
+ 
+ .employe .bg-primary {
+     background-color: #162f85 !important;
+ }
+ 
+ .employe .text-primary {
+     color: #162f85 !important;
+ }
+ 
+ .employe .chart-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .employe canvas {
+     max-width: 100%;
+     height: auto;
+ }
+ 
+ .employe .text-muted {
+     color: #6c757d !important;
+ }
+ /* Responsivitas */
+ 
+ @media (max-width: 768px) {
+     .header-bar h5 {
+         font-size: 14px;
+         /* Sesuaikan ukuran font header */
+     }
+     .employe h6 {
+         font-size: 12px;
+         /* Ukuran judul kartu lebih kecil */
+     }
+     .chart-container {
+         height: 150px;
+         /* Ukuran chart lebih kecil pada layar kecil */
+     }
+     .employe .text-primary {
+         font-size: 14px;
+     }
+     .employe .text-muted {
+         font-size: 12px;
+     }
+ }
+ 
+ @media (max-width: 576px) {
+     .header-bar h5 {
+         font-size: 12px;
+     }
+     .chart-container {
+         height: 120px;
+     }
+ }
