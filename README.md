@@ -22,7 +22,3 @@ Front-end **statis** untuk aplikasi Human Resource. Disusun dengan **HTML/CSS/SC
 - **Asset Vendor**: `vendors/` untuk lib pihak ketiga (ikon, plugin UI, dsb).
 - **Siap Deploy**: konfigurasi Netlify lewat `netlify.toml`.
 
----
-
-## Struktur Proyek (ringkas)
-
