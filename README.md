@@ -8,7 +8,7 @@
   <a href="#"><img src="https://img.shields.io/badge/Netlify-Deploy-00C7B7?logo=netlify&logoColor=white" alt="Netlify"></a>
 </p>
 
-Front-end **statis** untuk aplikasi Human Resource. Disusun dengan **HTML/CSS/SCSS/JS**, di-build menggunakan **Gulp**, dan siap **deploy ke Netlify**.
+Front-end **statis** untuk aplikasi Human Resource. Disusun dengan **HTML/CSS/SCSS/JS**, di-build menggunakan **Gulp**.
 
 > Repo ini adalah UI saja (tanpa backend). Halaman yang tersedia mencakup **Login** dan **Fasilitas Karyawan**; halaman lain ada di folder `pages/` dan komponen di `partials/`.
 
